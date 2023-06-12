@@ -23,24 +23,29 @@ body {
 /* ------------------------ HEADER ------------------------------------ */
 
 header {
-  background-color: black;
+  background-color: rgb(0, 0, 0);
   width: 100%;
   height: 120px;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  box-sizing: border-box;
 }
 
-@media (max-width: 768px){
-  header{
+@media (max-width: 768px) {
+  header {
     flex-direction: column;
     height: 130px;
     margin-top: 1em;
   }
-  nav{
-    margin-top: 1em;
+  nav {
+    margin-top: 0.5em;
+    display: flex;
+    align-items: center;
   }
 }
+
+
 /*Estilo logo*/
 .logo {
   width: 250px;
@@ -116,7 +121,7 @@ ul {
   height: 40px;
   width: 250px;
   padding: 0.2em;
-  
+
   font-size: 20px;
   font-weight: 700;
   color: white;
@@ -133,17 +138,18 @@ ul {
   font-size: 20px;
   border: solid white;
 }
-.imgInicio{
+.imgInicio {
   height: 400px;
-  width: 100%; 
+  width: 100%;
   display: flex;
   justify-self: center;
 }
-@media(max-width: 768px){
-  .imgInicio{
+@media (max-width: 768px) {
+  .imgInicio {
     width: 90%;
     height: 90%;
-  }
+    margin-top: 0.5em; }
+
 }
 
 /* ------------------------ TITULOS H1 ------------------------------------ */
@@ -168,6 +174,35 @@ h1 {
   border: solid rgb(199, 12, 12);
   width: 150px;
   border-width: 5px;
+}
+@media (max-width: 768px) {
+  h1 {
+    font-size: 20px;
+    margin: 0.5em;
+    width: 450px;
+  }
+  .titulos {
+    margin: 0;
+    margin-top: 0.5em;
+  }
+  .lineaRoja {
+    width: 110px;
+  }
+}
+@media (max-width: 425px) {
+  h1 {
+    font-size: 15px;
+    margin: 0.5em;
+    width: 200px;
+  }
+  .titulos {
+    margin: 0;
+    margin-top: 0.5em;
+  }
+  .lineaRoja {
+    width: 50px;
+  }
+
 }
 
 /*----------------- Propiedades de la pag inicio -------------------------*/
@@ -209,6 +244,15 @@ h1 {
   transform: translate(-20%, -10%);
   font-size: 30px;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+@media (max-width: 768px) {
+  .textActividad {
+    font-size: 20px;
+  }
+  .textActividad2 {
+    font-size: 20px;
+    left: 30px;
+  }
 }
 
 /*  ---------------------------- Propiedades pag horarios -----------------------------*/
@@ -252,6 +296,13 @@ tr:hover {
   height: 300px;
   margin-left: 0.8em;
   margin-bottom: 1em;
+}
+@media (max-width:768px) {
+  .imgGimnasio{
+    width: 200px;
+  height: 200px;
+  }
+  
 }
 
 /*------------------------ Propiedades pag nosotros ----------------------*/
@@ -420,15 +471,16 @@ textarea {
 
 footer {
   display: flex;
-  height: 120px;
-  justify-content: space-between;
+  height: 100px;
+  justify-content: space-evenly;
   align-items: center;
-  margin-top: 1em;
+  flex-direction: row;
 }
 
 .footerIndex {
   display: flex;
-  height: 120px;
+  height: 800px;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
 }
@@ -439,35 +491,64 @@ footer {
   justify-content: center;
   border: solid rgb(199, 12, 12);
   height: 20px;
-  width: 120px;
+  width: 110px;
   font-size: 18px;
   color: white;
   background-color: rgb(199, 12, 12);
   border-radius: 0.5em;
   cursor: pointer;
   text-decoration-line: none;
-  margin-top: 40px;
-  margin-right: 40px;
+  margin-top: 100px;
   font-weight: 500;
 }
 
 .datosFooter {
-  width: 700px;
-  height: 100px;
-  margin-top: 0.5em;
+  width: 600px;
+  height: 50px;
   display: flex;
+  justify-content: center;
   color: white;
   align-items: center;
-  margin-left: 30px;
 }
 
 .datoFooter {
-  width: 80px;
-  height: 80px;
-  margin: 2em;
+  height: 20px;
+  margin: 1em;
   display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: center;
-  font-size: 12px;
+  font-size: 14px;
 }
+@media (max-width: 768px) {
+  .datosFooter {
+    width: 600px;
+    height: 50px;
+    margin-top: 0.5em;
+    display: flex;
+    justify-content: center;
+    color: white;
+    align-items: center;
+  }
+}
+
+@media (max-width: 425px) {
+  .datosFooter {
+    width:300px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    color: white;
+    align-items: center;
+  }
+
+  .datoFooter{
+  width: 5px;
+  height: 5px;
+  margin: 4em;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-size: 10px;
+  }
+}
+
