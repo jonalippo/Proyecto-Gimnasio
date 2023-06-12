@@ -34,10 +34,14 @@ header {
 
 @media (max-width: 768px) {
   header {
-    flex-direction: column;
-    height: 130px;
+    flex-direction: row;
+    height: 110px;
     margin-top: 1em;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
   }
+
   nav {
     margin-top: 0.5em;
     display: flex;
@@ -45,12 +49,75 @@ header {
   }
 }
 
+.navbar {
+  padding: 0;
+  background-color: rgb(0, 0, 0) !important;
+}
 
+.navbar-toggler-icon {
+  background-color: transparent;
+  border-radius: 30%;
+  width: 40px;
+  height: 40px;
+  color: #ffffff;
+  border: solid white;
+  background-image: url(../images/MenuHamburguesa.png) !important;
+}
+
+.navbar-collapse {
+  flex-basis: 0 !important;
+}
+.navbar-expand-lg {
+  height: 100%;
+  position: relative;
+}
+
+.navbar-nav {
+  display: flex;
+  align-items: end;
+  background-color: rgb(0, 0, 0);
+  top: 0;
+  height: auto;
+
+  justify-content: center;
+}
+li {
+  margin: 0.5em;
+}
+@media (max-width: 768px) {
+  .navbar-nav {
+    width: 200px;
+  }
+}
+
+@media (max-width: 425px) {
+  .navbar-toggler-icon {
+    width: 35px;
+    height: 35px;
+  }
+  .navbar-nav {
+    display: flex;
+    align-items: end;
+    background-color: rgb(0, 0, 0);
+    top: 0;
+    height: auto;
+    width: 170px;
+    justify-content: center;
+  }
+}
 /*Estilo logo*/
 .logo {
   width: 250px;
   height: 90px;
   cursor: pointer;
+}
+
+@media (max-width: 425px) {
+  .logo {
+    width: 200px;
+    height: 80px;
+    margin-left: 1.5em;
+  }
 }
 /*Estilo Nav*/
 ul {
@@ -148,8 +215,8 @@ ul {
   .imgInicio {
     width: 90%;
     height: 90%;
-    margin-top: 0.5em; }
-
+    margin-top: 0.5em;
+  }
 }
 
 /* ------------------------ TITULOS H1 ------------------------------------ */
@@ -201,8 +268,8 @@ h1 {
   }
   .lineaRoja {
     width: 50px;
+    border-width: 3px;
   }
-
 }
 
 /*----------------- Propiedades de la pag inicio -------------------------*/
@@ -297,12 +364,17 @@ tr:hover {
   margin-left: 0.8em;
   margin-bottom: 1em;
 }
-@media (max-width:768px) {
-  .imgGimnasio{
+@media (max-width: 768px) {
+  .imgGimnasio {
     width: 200px;
-  height: 200px;
+    height: 200px;
   }
-  
+}
+@media (max-width: 425px) {
+  .imgGimnasio {
+    width: 190px;
+    height: 150px;
+  }
 }
 
 /*------------------------ Propiedades pag nosotros ----------------------*/
@@ -468,46 +540,11 @@ textarea {
 }
 
 /* ------------------------ FOOTER ------------------------------------ */
-
-footer {
+.containerFooter{
+  background-color: black;
   display: flex;
-  height: 100px;
   justify-content: space-evenly;
-  align-items: center;
   flex-direction: row;
-}
-
-.footerIndex {
-  display: flex;
-  height: 800px;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-
-.buttonFooter {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: solid rgb(199, 12, 12);
-  height: 20px;
-  width: 110px;
-  font-size: 18px;
-  color: white;
-  background-color: rgb(199, 12, 12);
-  border-radius: 0.5em;
-  cursor: pointer;
-  text-decoration-line: none;
-  margin-top: 100px;
-  font-weight: 500;
-}
-
-.datosFooter {
-  width: 600px;
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  color: white;
   align-items: center;
 }
 
@@ -520,35 +557,17 @@ footer {
   font-size: 14px;
 }
 @media (max-width: 768px) {
-  .datosFooter {
-    width: 600px;
-    height: 50px;
-    margin-top: 0.5em;
-    display: flex;
-    justify-content: center;
-    color: white;
-    align-items: center;
+  .datoFooter {
+
+    margin: 1em;
+    font-size: 12px;
   }
 }
 
 @media (max-width: 425px) {
-  .datosFooter {
-    width:300px;
-    height: 20px;
-    display: flex;
-    justify-content: center;
-    color: white;
-    align-items: center;
-  }
-
-  .datoFooter{
-  width: 5px;
-  height: 5px;
-  margin: 4em;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  font-size: 10px;
+  .datoFooter {
+    width: 5px;
+    margin: 4em;
+    font-size:8px;
   }
 }
-
