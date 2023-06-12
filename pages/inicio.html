@@ -1,157 +1,134 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/estilosProyecto.css" />
-    <link rel="shortcut icon" href="../images/faviconSportgym.png" type="image/x-icon">
-    <title>Inicio</title>
-  </head>
-  <body>
-    <div class="contenedorGral">
-      <header id="inicio">
-        <a href="/index.html">
-          <img class="logo" src="../images/logoSportgym.png" alt="Logo Sportsgym" /></a>
-        <nav>
-          <ul>
-            <li type="none">
-              <a href="../pages/inicio.html" class="buttonNav" style="width: 100px;">INICIO</a>
-            </li>
-            <li type="none">
-              <a href="../pages/horarios.html" class="buttonNav">HORARIOS</a>
-            </li>
-            <li type="none">
-              <a href="../pages/instalaciones.html" class="buttonNav"
-                >INSTALACIONES</a
-              >
-            </li>
-            <li type="none">
-              <a href="../pages/nosotros.html" class="buttonNav">NOSOTROS</a>
-            </li>
-            <li type="none">
-              <a href="../pages/contactanos.html" class="buttonNav">CONTACTANOS</a>
-            </li>
-          </ul>
-        </nav>
-      </header>
 
-      <main class="mainInicio">
-        <img src="../images/sectInicio.jpg" alt="imgInst" width="100%" height="400px">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="../css/estilosProyecto.css" />
+  <link rel="shortcut icon" href="../images/faviconSportgym.png" type="image/x-icon">
+  <title>Inicio</title>
+</head>
+
+<body>
+  <div class="container">
+    <header id="inicio">
+      <a href="/index.html">
+        <img class="logo" src="../images/logoSportgym.png" alt="Logo Sportsgym" /></a>
+      <nav class="col-lg-9 col-md-12 col-sm-12 d-none d-sm-block"><!--d-block d-sm-none-->
+        <ul>
+          <li type="none">
+            <a href="../pages/inicio.html" class="buttonNav" style="width: 100px;">INICIO</a>
+          </li>
+          <li type="none">
+            <a href="../pages/horarios.html" class="buttonNav">HORARIOS</a>
+          </li>
+          <li type="none">
+            <a href="../pages/instalaciones.html" class="buttonNav">INSTALACIONES</a>
+          </li>
+          <li type="none">
+            <a href="../pages/nosotros.html" class="buttonNav">NOSOTROS</a>
+          </li>
+          <li type="none">
+            <a href="../pages/contactanos.html" class="buttonNav">CONTACTANOS</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="mainInicio row">
+      <img src="../images/sectInicio.jpg" alt="imgInst" class="imgInicio">
       <div class="titulos">
         <div class="lineaRoja"></div>
         <h1>PROGRAMAS DE ENTRENAMIENTO</h1>
         <div class="lineaRoja"></div>
       </div>
-      <div class="imgActividades">
-        <div class="actividad">
-          <div class="textActividad2">MUSCULACION</div>
-          <img
-            src="../images/musculacion.jpg"
-            alt="musculacion"
-            width="100%"
-            height="200px"
-          />
-        </div>
-        <div class="actividad">
-        <div class="textActividad2">E. FUNCIONAL</div>
-        <img
-          src="../images/EN FUNCIONAL.jpg"
-          alt="funcional"
-          width="100%"
-          height="200px"
-        /></div>
-        <div class="actividad">
-          <div class="textActividad">CROSSFIT</div>
-          <img
-            src="../images/corssfit.jpg"
-            alt="crossfit"
-            width="100%"
-            height="200px"
-          />
-        </div>
-        <div class="actividad">
-          <div class="textActividad2">SPINNING</div>
-          <img
-            src="../images/spinning.jpg"
-            alt="spinning"
-            width="100%"
-            height="200px"
-          />
-        </div>
-        <div class="actividad">
-          <div class="textActividad">GAP</div>
-          <img src="../images/gap.jpg" alt="gap" width="100%" height="200px" />
-        </div>
-        <div class="actividad">
-          <div class="textActividad">PILATES</div>
-          <img
-            src="../images/pilates.jpg"
-            alt="pilates"
-            width="100%"
-            height="200px"
-          />
+
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-md-4 col-sm-12" style="text-align: -webkit-center">
+            <div class="actividad mt-4">
+              <div class="textActividad2">MUSCULACION</div>
+              <img src="../images/musculacion.jpg" class="img-fluid" alt="musculacion" />
+            </div>
+            <div class="actividad mt-4">
+              <div class="textActividad2">E. FUNCIONAL</div>
+              <img src="../images/EN FUNCIONAL.jpg" class="img-fluid" alt="funcional" />
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-12" style="text-align: -webkit-center">
+            <div class="actividad mt-4">
+              <div class="textActividad">CROSSFIT</div>
+              <img src="../images/corssfit.jpg" class="img-fluid" alt="crossfit" />
+            </div>
+            <div class="actividad mt-4">
+              <div class="textActividad2 ">SPINNING</div>
+              <img src="../images/spinning.jpg" class="img-fluid" alt="spinning" />
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-12" style="text-align: -webkit-center">
+            <div class="actividad mt-4">
+              <div class="textActividad">GAP</div>
+              <img src="../images/gap.jpg" class="img-fluid" alt="gap" />
+            </div>
+            <div class="actividad mt-4">
+              <div class="textActividad">PILATES</div>
+              <img src="../images/pilates.jpg" class="img-fluid" alt="pilates" />
+            </div>
+          </div>
         </div>
       </div>
-      <div class="servicios">
+
       <div class="titulos">
         <div class="lineaRoja"></div>
         <h1>SERVICIOS</h1>
         <div class="lineaRoja"></div>
       </div>
-      <div class="serviciosHijo">
-        <img src="../images/duchas1.jpg" alt="duchas" class="imgServicios" />
-        <img src="../images/lockers1.jpg" alt="lockers" class="imgServicios" />
-        <img src="../images/wifi1.jpg" alt="wifi" class="imgServicios" />
-        <img
-          src="../images/asi medica.jpg"
-          alt="asist medica"
-          class="imgServicios"
-        />
-      </div>
-      </main>
-
-      <footer>
-        <div class="datosFooter">
-          <div class="datoFooter">
-            <img
-              src="../images/iconoUbicacion.png"
-              alt="iconoUbicacion"
-              width="40px"
-              height="40px"
-            />
-            <p>Av. Buzon 971. Tandil</p>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class= "col-lg-2 col-md-2 col-sm-8">
+            <img class=" img-fluid" src="../images/duchas1.jpg" alt="duchas"/>
           </div>
-          <div class="datoFooter">
-            <img
-              src="../images/iconoWhatsapp.png"
-              alt="iconoWhatsapp"
-              width="40px"
-              height="40px"
-            />
-            <p>(2494)1565757</p>
+          <div class= "col-lg-2 col-md-2 col-sm-8">
+            <img class=" img-fluid" src="../images/lockers1.jpg" alt="lockers"/>
           </div>
-          <div class="datoFooter">
-            <img
-              src="../images/iconoCorreo.png"
-              alt="iconoCorreo"
-              width="40px"
-              height="40px"
-            />
-            <p>gimnasiosportsgym@gmail.com</p>
+          <div class= "col-lg-2 col-md-2 col-sm-8">
+            <img class=" img-fluid" src="../images/wifi1.jpg" alt="wifi"/>
           </div>
-          <div class="datoFooter">
-            <img
-              src="../images/iconoInstagram.png"
-              alt="iconoInstagram"
-              width="40px"
-              height="40px"
-            />
-            <p>sportgymTandil</p>
+          <div class= "col-lg-2 col-md-2 col-sm-8">            
+            <img class=" img-fluid" src="../images/asi medica.jpg" alt="asist medica"/>
           </div>
         </div>
-        <a href="#inicio" class="buttonFooter">INICIO</a>
-      </footer>
-    </div>
-  </body>
+      </div>
+    </main>
+
+    <footer class=" footer row">
+      <div class="datosFooter">
+        <div class="datoFooter">
+          <img src="../images/iconoUbicacion.png" alt="iconoUbicacion" width="40px" height="40px" />
+          <p>Av. Buzon 971. Tandil</p>
+        </div>
+        <div class="datoFooter">
+          <img src="../images/iconoWhatsapp.png" alt="iconoWhatsapp" width="40px" height="40px" />
+          <p>(2494)1565757</p>
+        </div>
+        <div class="datoFooter">
+          <img src="../images/iconoCorreo.png" alt="iconoCorreo" width="40px" height="40px" />
+          <p>gimnasiosportsgym@gmail.com</p>
+        </div>
+        <div class="datoFooter">
+          <img src="../images/iconoInstagram.png" alt="iconoInstagram" width="40px" height="40px" />
+          <p>sportgymTandil</p>
+        </div>
+      </div>
+      <a href="#inicio" class="buttonFooter">INICIO</a>
+    </footer>
+  </div>
+</body>
+
 </html>
