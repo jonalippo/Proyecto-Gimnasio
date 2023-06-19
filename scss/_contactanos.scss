@@ -1,0 +1,111 @@
+.mainHorarios {
+  display: grid;
+  grid-template-rows: repeat(4, auto);
+
+  .textoFormulario {
+    height: 95px;
+    text-align: center;
+    font-size: $fuentePpal;
+    font-weight: 900;
+    color: white;
+    margin-top: 1em;
+  }
+
+  .UbicYFormulario {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    justify-content: space-between;
+    align-items: center;
+
+    .mapaUbicacion {
+      width: 400px;
+      height: auto;
+    }
+
+    .formulario {
+      background-color: $colorSecundario;
+      margin-top: 1em;
+      color: white;
+      width: 500px;
+      height: auto;
+      padding: 1em;
+      text-align: center;
+      font-weight: 900;
+
+      .datosFormulario {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        input {
+          margin-top: 1em;
+          width: 460px;
+          height: 30px;
+          font-size: $fuentePpal;
+          padding-left: 1em;
+          border: none;
+          border-radius: 0.5em;
+        }
+
+        .selecActividad {
+          height: 30px;
+          width: 400px;
+          font-size: $fuentePpal;
+          padding-left: 1em;
+          border: none;
+          border-radius: 0.5em;
+        }
+
+        textarea {
+          margin-top: 1em;
+          padding: 1em;
+          font-size: $fuentePpal;
+          width: 460px;
+          border: none;
+          border-radius: 0.5em;
+        }
+        .buttonTextarea {
+          background-color: $colorFondo;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-top: 1em;
+          height: 30px;
+          width: 200px;
+          font-size: $fuentePpal;
+          color: white;
+          border-radius: 0.5em;
+          border: none;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .datosContactos {
+    width: auto;
+    height: 130px;
+    margin-top: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+
+    .dato {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 200px;
+      height: 130px;
+      font-size: $fuentePpal;
+      margin: 1em;
+      &:hover {
+        color: $colorSecundario;
+        font-size: 20px;
+        font-weight: 600;
+      }
+    }
+  }
+}

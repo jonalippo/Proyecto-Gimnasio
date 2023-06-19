@@ -1,0 +1,240 @@
+@import "variables";
+@import "index";
+@import "inicio";
+@import "horarios";
+@import "instalaciones";
+@import "nosotros";
+@import "contactanos";
+
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  background-color: $colorFondo;
+}
+
+/* ------------------------ HEADER ------------------------------------ */
+
+header {
+  background-color: $colorFondo;
+  width: 100%;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  box-sizing: border-box;
+
+  /*Estilo Nav*/
+  ul {
+    width: 700px;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .buttonNav {
+    height: 30px;
+    width: 150px;
+    padding: 0.2em;
+    font-size: 18px;
+    color: white;
+    background-color: $colorFondo;
+    border-radius: 0.5em;
+    border: none;
+    cursor: pointer;
+    text-decoration-line: none;
+    &:hover {
+      color: $colorSecundario;
+      font-size: 25px;
+    }
+  }
+
+  .navbar {
+    padding: 0;
+    background-color: rgb(0, 0, 0) !important;
+  }
+
+  .navbar-toggler-icon {
+    background-color: transparent;
+    border-radius: 30%;
+    width: 40px;
+    height: 40px;
+    color: #ffffff;
+    border: solid white;
+    background-image: url(../images/MenuHamburguesa.png) !important;
+  }
+
+  .navbar-collapse {
+    flex-basis: 0 !important;
+  }
+
+  .navbar-expand-lg {
+    height: 100%;
+    position: relative;
+  }
+
+  .navbar-nav {
+    display: flex;
+    align-items: end;
+    background-color: $colorFondo;
+    top: 0;
+    height: auto;
+    justify-content: center;
+  }
+
+  @media (max-width: 425px) {
+    .navbar-toggler-icon {
+      width: 35px;
+      height: 35px;
+    }
+
+    .navbar-nav {
+      display: flex;
+      align-items: end;
+      background-color: $colorFondo;
+      top: 0;
+      height: auto;
+      width: 170px;
+      justify-content: center;
+    }
+  }
+
+  li {
+    margin: 0.5em;
+  }
+
+  /*Estilo logo*/
+  .logo {
+    width: 250px;
+    height: 90px;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 425px) {
+    .logo {
+      width: 200px;
+      height: 80px;
+      margin-left: 1.5em;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: row;
+    height: 110px;
+    margin-top: 1em;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    nav {
+      margin-top: 0.5em;
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar-nav {
+      width: 200px;
+    }
+  }
+}
+
+/* ------------------------ TITULOS H1 DE TODAS LAS PAG ------------------------------------ */
+
+.titulos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 1em;
+
+  h1 {
+    color: white;
+    font-size: 30px;
+    width: 530px;
+    text-align: center;
+    margin: 1em;
+  }
+
+  .lineaRoja {
+    border: solid $colorSecundario;
+    width: 150px;
+    border-width: 5px;
+  }
+}
+
+@media (max-width: 768px) {
+  .titulos {
+    margin: 0;
+    margin-top: 0.5em;
+
+    h1 {
+      font-size: 15px;
+      margin: 0.5em;
+      width: 300px;
+    }
+
+    .lineaRoja {
+      width: 100px;
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .titulos {
+    margin: 0;
+    margin-top: 0.5em;
+
+    h1 {
+      font-size: 15px;
+      margin: 0.5em;
+      width: 200px;
+    }
+
+    .lineaRoja {
+      width: 50px;
+      border-width: 3px;
+    }
+  }
+}
+
+/* ------------------------ FOOTER ------------------------------------ */
+.containerFooter{
+  background-color: $colorFondo;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 1em;
+
+  .datoFooter {
+    height: 20px;
+    margin: 1em;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 14px;
+  }
+  @media (max-width: 768px) {
+    .datoFooter {
+      margin: 1em;
+      font-size: 12px;
+    }
+  }
+  @media (max-width: 425px) {
+    .datoFooter {
+      width: 5px;
+      margin: 4em;
+      font-size:8px;
+    }
+  }
+}
+

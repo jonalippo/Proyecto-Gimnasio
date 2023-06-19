@@ -1,0 +1,46 @@
+.nosotros {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: 340px;
+
+  .porqNosotros {
+    width: 280px;
+    height: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin: 1em;
+  }
+}
+
+.containerProfesores {
+  width: auto;
+  flex-direction: column;
+
+  .contenedor {
+    width: auto;
+    display: flex;
+    justify-content: center;
+
+    .profesor {
+      width: 210px;
+      height: 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 18px;
+      text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0.3em;
+    }
+  }
+}

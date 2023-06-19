@@ -1,0 +1,29 @@
+.mainInst {
+  display: grid;
+  grid-template-rows: repeat(9, auto);
+
+  .galeriaImg {
+    display: flex;
+    justify-content: center;
+  }
+
+  .imgGimnasio {
+    width: 400px;
+    height: 300px;
+    margin-left: 0.8em;
+    margin-bottom: 1em;
+  }
+
+  @media (max-width: 768px) {
+    .imgGimnasio {
+      width: 200px;
+      height: 200px;
+    }
+  }
+  @media (max-width: 425px) {
+    .imgGimnasio {
+      width: 190px;
+      height: 150px;
+    }
+  }
+}

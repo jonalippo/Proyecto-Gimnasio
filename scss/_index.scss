@@ -1,0 +1,41 @@
+.bodyIndex {
+  background-image: url(../images/fachada2.1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .mainIndex {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+
+    .logoIndex {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: auto;
+      margin-top: 2em;
+    }
+
+    .buttonMain {
+      display: flex;
+      height: 60px;
+      width: 300px;
+      padding: 0.2em;
+      font-size: 24px;
+      font-weight: 700;
+      color: white;
+      border: solid $colorSecundario 4px;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      text-decoration-line: none;
+      margin-top: 2em;
+      &:hover {
+        color: $colorSecundario;
+        font-size: 26px;
+        border: solid white;
+      }
+    }
+  }
+}
