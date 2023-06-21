@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -16,8 +17,125 @@
 </head>
 
 <body>
-  <div class="container">
-    <header>
+  <div class="container-fluid">
+  <header class="header" id="inicio">
+      <div class="logoSportgym">
+        <a href="/index.html">
+          <img class="logo" src="../images/logoSportgym.png" alt="Logo Sportgym" /></a>
+      </div>
+      <div class="buttonMenu">
+        <label for="btn-menu">MENU</label>
+      </div>
+      <input type="checkbox" id="btn-menu">
+      <nav class="menu">
+        <a href="../pages/inicio.html">INICIO</a>
+        <a href="../pages/horarios.html">HORARIOS</a>
+        <a href="../pages/instalaciones.html">INSTALACIONES</a>
+        <a href="../pages/nosotros.html">NOSOTROS</a>
+        <a href="../pages/contactanos.html">CONTACTANOS</a>
+      </nav>
+  </header>
+
+  <main class="mainInicio row">
+    <img src="../images/sectInicio.jpg" alt="imgInst" class="imgInicio">
+    <div class="titulos">
+      <div class="lineaRoja"></div>
+      <h1>PROGRAMAS DE ENTRENAMIENTO</h1>
+      <div class="lineaRoja"></div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-12">
+          <div class="actividad mt-4">
+            <div class="textActividad2">MUSCULACION</div>
+            <img src="../images/musculacion.jpg" class="img-fluid" alt="musculacion" />
+          </div>
+          <div class="actividad mt-4">
+            <div class="textActividad">GAP</div>
+            <img src="../images/gap.jpg" class="img-fluid" alt="gap" />
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-12">
+          <div class="actividad mt-4">
+            <div class="textActividad2 ">SPINNING</div>
+            <img src="../images/spinning.jpg" class="img-fluid" alt="spinning" />
+          </div>
+          <div class="actividad mt-4">
+            <div class="textActividad">CROSSFIT</div>
+            <img src="../images/corssfit.jpg" class="img-fluid" alt="crossfit" />
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-12">
+          <div class="actividad mt-4">
+            <div class="textActividad2">E. FUNCIONAL</div>
+            <img src="../images/EN FUNCIONAL.jpg" class="img-fluid" alt="funcional" />
+          </div>
+          <div class="actividad mt-4">
+            <div class="textActividad">PILATES</div>
+            <img src="../images/pilates.jpg" class="img-fluid" alt="pilates" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="titulos">
+      <div class="lineaRoja"></div>
+      <h1>SERVICIOS</h1>
+      <div class="lineaRoja"></div>
+    </div>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-2 col-md-2 col-sm-2" style="width: 90px">
+          <img class="img-fluid imgServicios" src="../images/duchas1.jpg" alt="duchas"/>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-2" style="width: 90px">
+          <img class="img-fluid imgServicios" src="../images/lockers1.jpg" alt="lockers"/>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-2" style="width: 90px">
+          <img class="img-fluid imgServicios" src="../images/wifi1.jpg" alt="wifi"/>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-2" style="width: 90px">
+          <img class="img-fluid imgServicios" src="../images/asi medica.jpg" alt="asist medica"/>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="contFooter1">
+    </div>
+    <a href="#inicio"><img src="../images/iconoFelecha.png" alt="flecha" width="30px"></a>
+    <div class="contFooter2">
+      <div class="dato">
+        <img class="iconoFooter" src="../images/iconoUbicacion.png" alt="iconoUbicacion">      
+        <p style="margin-left:10px;">Av. Buzon 971 - Tandil</p>
+      </div>
+      <div class="dato">
+        <img class="iconoFooter" src="../images/iconoWhatsapp.png" alt="iconoUbicacion">
+        <p style="margin-left:10px;">(2494)1565757</p>
+      </div>
+      <div class="dato">
+        <img class="iconoFooter" src="../images/iconoCorreo.png" alt="iconoUbicacion">
+        <p style="margin-left:10px;">gimnasiosportsgym@gmail.com</p>
+      </div>
+      <div class="dato">
+        <img class="iconoFooter" src="../images/iconoInstagram.png" alt="iconoUbicacion">
+        <p style="margin-left:10px;">sportgymTandil</p>
+      </div>
+    </div>
+  </footer>
+</div>
+</body>
+
+</html>
+
+
+
+
+
+
+  <!-- <header id="inicio">
       <a href="/index.html">
         <img class="logo" src="../images/logoSportgym.png" alt="Logo Sportsgym" /></a>
 
@@ -47,96 +165,4 @@
           </ul>
         </div>
       </nav>
-    </header>
-
-    <main class="mainInicio row">
-      <img src="../images/sectInicio.jpg" alt="imgInst" class="imgInicio">
-      <div class="titulos">
-        <div class="lineaRoja"></div>
-        <h1>PROGRAMAS DE ENTRENAMIENTO</h1>
-        <div class="lineaRoja"></div>
-      </div>
-
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-4 col-md-4 col-sm-12" style="text-align: -webkit-center">
-            <div class="actividad mt-4">
-              <div class="textActividad2">MUSCULACION</div>
-              <img src="../images/musculacion.jpg" class="img-fluid" alt="musculacion" />
-            </div>
-            <div class="actividad mt-4">
-              <div class="textActividad">GAP</div>
-              <img src="../images/gap.jpg" class="img-fluid" alt="gap" />
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-4 col-sm-12" style="text-align: -webkit-center">
-            <div class="actividad mt-4">
-              <div class="textActividad2 ">SPINNING</div>
-              <img src="../images/spinning.jpg" class="img-fluid" alt="spinning" />
-            </div>
-            <div class="actividad mt-4">
-              <div class="textActividad">CROSSFIT</div>
-              <img src="../images/corssfit.jpg" class="img-fluid" alt="crossfit" />
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-4 col-sm-12" style="text-align: -webkit-center">
-            <div class="actividad mt-4">
-              <div class="textActividad2">E. FUNCIONAL</div>
-              <img src="../images/EN FUNCIONAL.jpg" class="img-fluid" alt="funcional" />
-            </div>
-            <div class="actividad mt-4">
-              <div class="textActividad">PILATES</div>
-              <img src="../images/pilates.jpg" class="img-fluid" alt="pilates" />
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="titulos">
-        <div class="lineaRoja"></div>
-        <h1>SERVICIOS</h1>
-        <div class="lineaRoja"></div>
-      </div>
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-2 col-md-2 col-sm-2" style="width: 90px">
-            <img class="img-fluid" src="../images/duchas1.jpg" alt="duchas" />
-          </div>
-          <div class="col-lg-2 col-md-2 col-sm-2" style="width: 90px">
-            <img class="img-fluid" src="../images/lockers1.jpg" alt="lockers" />
-          </div>
-          <div class="col-lg-2 col-md-2 col-sm-2" style="width: 90px">
-            <img class="img-fluid" src="../images/wifi1.jpg" alt="wifi" />
-          </div>
-          <div class="col-lg-2 col-md-2 col-sm-2" style="width: 90px">
-            <img class="img-fluid" src="../images/asi medica.jpg" alt="asist medica" />
-          </div>
-        </div>
-      </div>
-    </main>
-
-    <footer class="footer bg-dark text-light">
-      <div class="container">
-        <div class=" containerFooter row">
-          <div class="datoFooter">
-            <img src="../images/iconoUbicacion.png" alt="iconoUbicacion" width="30px" height="30px" />
-            <p>Buzon 971</p>
-          </div>
-          <div class="datoFooter">
-            <img src="../images/iconoWhatsapp.png" alt="iconoWhatsapp" width="30px" height="30px" />
-            <p>(2494)1565757</p>
-          </div>
-          <div class="datoFooter">
-            <img src="../images/iconoCorreo.png" alt="iconoCorreo" width="30px" height="30px" />
-            <p>gimnasiosportsgym@gmail.com</p>
-          </div>
-          <div class="datoFooter">
-            <img src="../images/iconoInstagram.png" alt="iconoInstagram" width="30px" height="30px" />
-            <p>sportgymTandil</p>
-          </div>
-        </div>
-      </div>
-  </footer>
-</body>
-
-</html>
+    </header> -->

@@ -19,130 +19,108 @@ body {
 }
 
 /* ------------------------ HEADER ------------------------------------ */
-
-header {
+.header {
+  width: auto;
+  height: 110px;
   background-color: $colorFondo;
-  width: 100%;
-  height: 120px;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.5);
   display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  box-sizing: border-box;
+  justify-content: space-around;
 
-  /*Estilo Nav*/
-  ul {
-    width: 700px;
-    height: 30px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-  }
+  .logoSportgym {
+    float: left;
+    line-height: 75px;
 
-  .buttonNav {
-    height: 30px;
-    width: 150px;
-    padding: 0.2em;
-    font-size: 18px;
-    color: white;
-    background-color: $colorFondo;
-    border-radius: 0.5em;
-    border: none;
-    cursor: pointer;
-    text-decoration-line: none;
-    &:hover {
-      color: $colorSecundario;
-      font-size: 25px;
-    }
-  }
-
-  .navbar {
-    padding: 0;
-    background-color: rgb(0, 0, 0) !important;
-  }
-
-  .navbar-toggler-icon {
-    background-color: transparent;
-    border-radius: 30%;
-    width: 40px;
-    height: 40px;
-    color: #ffffff;
-    border: solid white;
-    background-image: url(../images/MenuHamburguesa.png) !important;
-  }
-
-  .navbar-collapse {
-    flex-basis: 0 !important;
-  }
-
-  .navbar-expand-lg {
-    height: 100%;
-    position: relative;
-  }
-
-  .navbar-nav {
-    display: flex;
-    align-items: end;
-    background-color: $colorFondo;
-    top: 0;
-    height: auto;
-    justify-content: center;
-  }
-
-  @media (max-width: 425px) {
-    .navbar-toggler-icon {
-      width: 35px;
-      height: 35px;
-    }
-
-    .navbar-nav {
-      display: flex;
-      align-items: end;
-      background-color: $colorFondo;
-      top: 0;
-      height: auto;
-      width: 170px;
-      justify-content: center;
-    }
-  }
-
-  li {
-    margin: 0.5em;
-  }
-
-  /*Estilo logo*/
-  .logo {
-    width: 250px;
-    height: 90px;
-    cursor: pointer;
-  }
-  
-  @media (max-width: 425px) {
     .logo {
-      width: 200px;
-      height: 80px;
-      margin-left: 1.5em;
+      width: 250px;
+      margin-top: 0.5em;
+    }
+    @media (max-width: 768px) {
+      .logo {
+        width: 200px;
+        margin-top: 1em;
+      }
+    }
+    @media (max-width: 425px) {
+      .logo {
+        width: 180px;
+      }
+      .header {
+        background-color: aqua;
+      }
     }
   }
-}
 
-@media (max-width: 768px) {
-  header {
-    flex-direction: row;
-    height: 110px;
-    margin-top: 1em;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
+  .menu {
+    line-height: 110px;
+    a {
+      color: white;
+      text-decoration: none;
+      display: inline-block;
+      margin-left: 1em;
+      line-height: normal;
+      font-size: $fuentePpal;
+      transition: all 1000ms ease;
+      &:hover {
+        color: red;
+        border-bottom: 12px solid transparent;
+      }
+    }
+  }
 
-    nav {
-      margin-top: 0.5em;
+  /*Estilos del boton menu*/
+  #btn-menu {
+    display: none;
+  }
+  .buttonMenu {
+    float: right;
+    display: none;
+    height: 1px;
+    label {
+      color: white;
+      background-color: $colorSecundario;
+      padding: 2px;
+      width: 60px;
+      text-align: center;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      &:hover {
+        background-color: white;
+        color: $colorSecundario;
+        font-weight: 900;
+        width: 100px;
+      }
+    }
+  }
+
+  @media (max-width: 425px), (max-width: 768px) {
+    .buttonMenu {
+      display: block;
+      margin-top: 40px;
+    }
+    .menu {
+      position: absolute;
+      background-color: rgb(15, 14, 14);
+      width: 100%;
+      height: 160px;
+      top: 110px;
+      left: 0;
+      transition: all 500ms ease;
+      transform: translateX(-100%);
       display: flex;
-      align-items: center;
+      flex-direction: column;
     }
 
-    .navbar-nav {
-      width: 200px;
+    #btn-menu:checked ~ .menu {
+      transform: translateX(0%);
+    }
+    .menu a {
+      display: block;
+      margin-top: 10px;
     }
   }
 }
@@ -154,14 +132,13 @@ header {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  margin: 1em;
 
   h1 {
     color: white;
     font-size: 30px;
     width: 530px;
     text-align: center;
-    margin: 1em;
+    margin: 0.5em;
   }
 
   .lineaRoja {
@@ -207,34 +184,193 @@ header {
 }
 
 /* ------------------------ FOOTER ------------------------------------ */
-.containerFooter{
-  background-color: $colorFondo;
+footer {
+  width: auto;
+  height: 130px;
   display: flex;
-  justify-content: space-evenly;
-  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 2em;
   align-items: center;
-  margin-top: 1em;
+  background-color: rgb(10, 10, 10);
 
-  .datoFooter {
-    height: 20px;
-    margin: 1em;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    font-size: 14px;
+  .contFooter1 {
+    width: 180px;
+    height: 100px;
+    background-image: url(../images/logoSportgym.png);
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: 2em;
   }
   @media (max-width: 768px) {
-    .datoFooter {
-      margin: 1em;
-      font-size: 12px;
+    .contFooter1 {
+      width: 100px;
+      height: 100px;
+    }
+  }
+  .contFooter2 {
+    width: auto;
+    flex-direction: column;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    margin-right: 2em;
+    margin-top: 1em;
+  }
+  .dato {
+    display: flex;
+    justify-content: flex-end;
+    color: white;
+    font-size: 12px;
+    text-align: center;
+  }
+  .iconoFooter{
+    width: 20px;
+    height: 20px; 
+  }
+  @media (max-width: 768px) {
+    .dato {
+      font-size: 10px;
+    }
+    .iconoFooter{
+      width: 18px;
+      height: 18px;
     }
   }
   @media (max-width: 425px) {
-    .datoFooter {
-      width: 5px;
-      margin: 4em;
-      font-size:8px;
+    .dato {
+      font-size: 8px;
+    }
+    .iconoFooter{
+      width: 12px;
+      height: 12px;
     }
   }
 }
 
+// header {
+//   background-color: $colorFondo;
+//   width: 100%;
+//   height: 120px;
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-evenly;
+//   box-sizing: border-box;
+
+//   /*Estilo Nav*/
+//   ul {
+//     width: 700px;
+//     height: 30px;
+//     display: flex;
+//     flex-direction: row;
+//     align-items: center;
+//     justify-content: space-evenly;
+//   }
+
+//   .buttonNav {
+//     height: 30px;
+//     width: 150px;
+//     padding: 0.2em;
+//     font-size: $fuentePpal;
+//     color: white;
+//     background-color: $colorFondo;
+//     border-radius: 0.5em;
+//     border: none;
+//     cursor: pointer;
+//     text-decoration-line: none;
+//     &:hover {
+//       color: $colorSecundario;
+//       font-size: 25px;
+//     }
+//   }
+
+//   .navbar {
+//     padding: 0;
+//     background-color: $colorFondo !important;
+//   }
+
+//   .navbar-toggler-icon {
+//     background-color: transparent;
+//     border-radius: 30%;
+//     width: 40px;
+//     height: 40px;
+//     color: #ffffff;
+//     border: solid white;
+//     background-image: url(../images/MenuHamburguesa.png) !important;
+//   }
+
+//   .navbar-collapse {
+//     flex-basis: 0 !important;
+//   }
+
+//   .navbar-expand-lg {
+//     height: 100%;
+//     position: relative;
+//   }
+
+//   .navbar-nav {
+//     display: flex;
+//     align-items: end;
+//     background-color: $colorFondo;
+//     top: 0;
+//     height: auto;
+//     justify-content: center;
+//   }
+
+//   @media (max-width: 425px) {
+//     .navbar-toggler-icon {
+//       width: 35px;
+//       height: 35px;
+//     }
+
+//     .navbar-nav {
+//       display: flex;
+//       align-items: end;
+//       background-color: $colorFondo;
+//       top: 0;
+//       height: auto;
+//       width: 170px;
+//       justify-content: center;
+//     }
+//   }
+
+//   li {
+//     margin: 0.5em;
+//   }
+
+//   /*Estilo logo*/
+//   .logo {
+//     width: 250px;
+//     height: 90px;
+//     cursor: pointer;
+//   }
+
+//   @media (max-width: 425px) {
+//     .logo {
+//       width: 200px;
+//       height: 80px;
+//       margin-left: 1.5em;
+//     }
+//   }
+// }
+
+// @media (max-width: 768px) {
+//   header {
+//     flex-direction: row;
+//     height: 110px;
+//     margin-top: 1em;
+//     display: flex;
+//     justify-content: space-between;
+//     width: 100%;
+
+//     nav {
+//       margin-top: 0.5em;
+//       display: flex;
+//       align-items: center;
+//     }
+
+//     .navbar-nav {
+//       width: 200px;
+//     }
+//   }
+// }

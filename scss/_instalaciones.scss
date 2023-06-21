@@ -2,16 +2,27 @@
   display: grid;
   grid-template-rows: repeat(9, auto);
 
-  .galeriaImg {
+  .section{
     display: flex;
-    justify-content: center;
-  }
+    width: auto ;
+    height: 200px;
 
-  .imgGimnasio {
-    width: 400px;
-    height: 300px;
-    margin-left: 0.8em;
-    margin-bottom: 1em;
+    .imgSection{
+      width: 0px;
+      margin:0.1em;
+      flex-grow: 1;
+      object-fit: cover;
+      opacity: .4;
+      transition: .6s ease;
+      &:hover{
+        cursor: crosshair;
+        width: 150px;
+        opacity:8;
+        filter: contrast(100%);
+      }
+    }
+
+
   }
 
   @media (max-width: 768px) {

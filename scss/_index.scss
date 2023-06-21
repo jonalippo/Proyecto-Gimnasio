@@ -1,5 +1,6 @@
 .bodyIndex {
   background-image: url(../images/fachada2.1.jpg);
+  background-position: top right;
   background-repeat: no-repeat;
   background-size: cover;
 
@@ -8,21 +9,40 @@
     align-items: center;
     flex-direction: column;
     height: auto;
+    margin-top: 50px;
 
     .logoIndex {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: auto;
-      margin-top: 2em;
+      width: 900px;
+      height: 300px;
+      background-image: url(../images/logoSportgym.png);
+      background-position: center center;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    @media (max-width: 768px) {
+      .logoIndex {
+        width: 600px;
+        height: 250px;
+        margin-top: 5px;
+      }
+    }
+    @media (max-width: 425px) {
+      .logoIndex {
+        width: 350px;
+        height: 250px;
+      }
+      .buttonMain {
+        height: 30px;
+        width: 200px;
+      }
     }
 
     .buttonMain {
       display: flex;
       height: 60px;
-      width: 300px;
+      width: 320px;
       padding: 0.2em;
-      font-size: 24px;
+      font-size: 26px;
       font-weight: 700;
       color: white;
       border: solid $colorSecundario 4px;
@@ -30,12 +50,30 @@
       align-items: center;
       cursor: pointer;
       text-decoration-line: none;
-      margin-top: 2em;
+      margin-top: 3em;
       &:hover {
         color: $colorSecundario;
-        font-size: 26px;
+        font-size: 28px;
         border: solid white;
       }
     }
+    @media (max-width: 425px), (max-width: 768px) {
+      .buttonMain {
+        height: 40px;
+        width: 300px;
+        margin-top: 1em;
+        font-weight: 600;
+      }
+    }
   }
+}
+.contFooterIndex {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.iconoFooterIndex {
+  width: 40px;
+  height: 40px;
 }
