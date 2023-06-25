@@ -10,60 +10,39 @@
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="../css/styles.css">
-  <link rel="shortcut icon" href="../images/faviconSportgym.png" type="image/x-icon">
-  <title>Contactanos</title>
+  <link rel="shortcut icon" href="../images/LogoManc.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <title>Contactate!!</title>
 </head>
 
 <body>
-  <div class="container">
-    <header id="inicio">
-      <a href="/index.html">
-        <img class="logo" src="../images/logoSportgym.png" alt="Logo Sportsgym" /></a>
-
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav navbar-nav">
-            <li class="nav-item active">
-              <a href="../pages/inicio.html" class="buttonNav" style="width: 100px;">INICIO</a>
-            </li>
-            <li class="nav-item">
-              <a href="../pages/horarios.html" class="buttonNav">HORARIOS</a>
-            </li>
-            <li class="nav-item">
-              <a href="../pages/instalaciones.html" class="buttonNav">INSTALACIONES</a>
-            </li>
-            <li class="nav-item">
-              <a href="../pages/nosotros.html" class="buttonNav">NOSOTROS</a>
-            </li>
-            <li class="nav-item">
-              <a href="../pages/contactanos.html" class="buttonNav">CONTACTANOS</a>
-            </li>
-          </ul>
-        </div>
+  <div class="container-fluid">
+    <header class="header" id="inicio">
+      <div class="logoSportgym">
+        <a href="/index.html">
+          <img class="logo animate__animated animate__swing" src="../images/logoSportgym.png" alt="Logo Sportgym" /></a>
+      </div>
+      <div class="buttonMenu">
+        <label for="btn-menu">MENU</label>
+      </div>
+      <input type="checkbox" id="btn-menu">
+      <nav class="menu">
+        <a href="../pages/inicio.html">INICIO</a>
+        <a href="../pages/horarios.html">HORARIOS</a>
+        <a href="../pages/instalaciones.html">INSTALACIONES</a>
+        <a href="../pages/nosotros.html">NOSOTROS</a>
+        <a href="../pages/contactanos.html">CONTACTANOS</a>
       </nav>
     </header>
 
     <main class="mainHorarios">
-      <img src="../images/sectContactanos.jpg" alt="contactanos" width="100%" height="400px">
+      <img src="../images/sectContactanos.jpg" alt="contactanos" class="imgContactanos animate__animated animate__pulse">
       <div class="textoFormulario">
-        <p>PONETE EN CONTACTO!</p>
-        <p>¿Te gustaria asesorarte con un profesional?. Estamos conectados para ayudarte. Dejanos tu consulta.</p>
+        <p>PONETE EN CONTACTO! <br>¿Te gustaria asesorarte con un profesional?. Estamos conectados para ayudarte. Dejanos tu consulta.</p>
       </div>
 
       <div class="UbicYFormulario">
-        <div class="mapaUbicacion">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3173.072745040584!2d-59.12260442477039!3d-37.31710450581571!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95911ff1e7faba7b%3A0x2fcadb7459d1d783!2sAv.%20Buz%C3%B3n%20971%2C%20B7001%20Tandil%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1683656756405!5m2!1ses!2sar"
-            width="100%" height="550px" style="border: 0" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-
-        <div class="formulario">
+         <div class="formulario">
           <fieldset>
             <legend>Formulario de contacto</legend>
             <form class="datosFormulario" target="_blank" action="" method="post">
@@ -71,7 +50,7 @@
               <input type="text" name="apellido" required placeholder="Apellido">
               <input type="text" name="telefono" required placeholder="Teléfono">
               <input type="email" name="email" required placeholder="Correo electrónico">
-              <label style="height: 30px;">Selecciona la actividad</label>
+              <label style="font-size: 20px;">Selecciona la actividad</label>
               <select class="selecActividad" required>
                 <option value="Musculación" selected>Musculación</option>
                 <option value="Entr. Funcional" selected>Entr. Funcional</option>
@@ -81,29 +60,16 @@
                 <option value="Pilates" selected>Pilates</option>
                 <option value="Otra consulta" selected>Otra consulta</option>
               </select>
-              <textarea name="comentario" required placeholder="Dejanos tu consulta!!" cols="80" rows="5"></textarea>
+              <textarea name="comentario" required placeholder="Dejanos tu consulta!!" cols="80" rows="3"></textarea>
               <button type="submit" class="buttonTextarea">Enviar</button>
             </form>
           </fieldset>
         </div>
-      </div>
-
-      <div class="datosContactos">
-        <div class="dato">
-          <img src="../images/iconoUbicacion.png" alt="iconoUbicacion" width="60px" height="50px">
-          <p>Av. Buzon 971. Tandil</p>
-        </div>
-        <div class="dato">
-          <img src="../images/iconoWhatsapp.png" alt="iconoWhatsapp" width="60px" height="50px">
-          <p>(2494)1565757</p>
-        </div>
-        <div class="dato">
-          <img src="../images/iconoCorreo.png" alt="iconoCorreo" width="60px" height="50px">
-          <p>gimnasiosportsgym@gmail.com</p>
-        </div>
-        <div class="dato">
-          <img src="../images/iconoInstagram.png" alt="iconoInstagram" width="60px" height="50px">
-          <p>sportgymTandil</p>
+        <div class="mapaUbicacion">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3173.072745040584!2d-59.12260442477039!3d-37.31710450581571!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95911ff1e7faba7b%3A0x2fcadb7459d1d783!2sAv.%20Buz%C3%B3n%20971%2C%20B7001%20Tandil%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1683656756405!5m2!1ses!2sar"
+            width="100%" height="260px" style="border: 0" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
     </main>

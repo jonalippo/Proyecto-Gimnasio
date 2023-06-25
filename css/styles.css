@@ -7,6 +7,7 @@
 }
 .bodyIndex .mainIndex {
   display: flex;
+  justify-content: none;
   align-items: center;
   flex-direction: column;
   height: auto;
@@ -33,21 +34,21 @@
     height: 250px;
   }
   .bodyIndex .mainIndex .buttonMain {
-    height: 30px;
     width: 200px;
+    height: 30px;
   }
 }
 .bodyIndex .mainIndex .buttonMain {
-  display: flex;
-  height: 60px;
   width: 320px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 0.2em;
   font-size: 26px;
   font-weight: 700;
   color: white;
   border: solid rgb(199, 12, 12) 4px;
-  justify-content: center;
-  align-items: center;
   cursor: pointer;
   text-decoration-line: none;
   margin-top: 3em;
@@ -59,18 +60,18 @@
 }
 @media (max-width: 425px), (max-width: 768px) {
   .bodyIndex .mainIndex .buttonMain {
-    height: 40px;
     width: 300px;
+    height: 40px;
     margin-top: 1em;
     font-weight: 600;
   }
 }
 
 .contFooterIndex {
-  width: 100%;
   display: flex;
-  align-items: center;
   justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
 }
 
 .iconoFooterIndex {
@@ -82,80 +83,144 @@
 .mainInicio {
   display: grid;
   grid-template-rows: repeat(5, auto);
+  /*Propiedades del section*/
 }
-
-.imgInicio {
-  height: 350px;
+@media (max-width: 425px) {
+  .mainInicio .imgInicio {
+    width: 100%;
+    height: 80%;
+  }
+}
+.mainInicio .imgInicio {
   width: 100%;
+  height: 350px;
   display: flex;
-  justify-self: center;
+  justify-content: center;
+  align-items: none;
 }
-
 @media (max-width: 768px) {
-  .imgInicio {
+  .mainInicio .imgInicio {
     width: 90%;
     height: 90%;
-    margin-top: 0.5em;
   }
 }
-.actividad {
-  position: relative;
-  display: inline-block;
+.mainInicio .sectionActividades {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  margin-top: 0.5em;
+}
+.mainInicio .sectionActividades .containerActiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 350px;
+  flex-direction: column;
   text-align: center;
-  border-radius: 1em;
-  overflow: hidden;
-  padding: none !important;
+  margin: 0.8em;
 }
-.actividad .textActividad, .actividad .textActividad2 {
+.mainInicio .sectionActividades .containerActiv:hover {
+  box-shadow: 5px 10px 20px 1px rgba(255, 255, 255, 0.273); /*Efecto de las cards*/
+  transition: all 0.4s linear; /*Transicion de los efectos*/
+}
+.mainInicio .sectionActividades .containerActiv .imgActividad {
+  width: 100%;
+  height: 40%;
+}
+@media (max-width: 425px) {
+  .mainInicio .sectionActividades .containerActiv .imgActividad {
+    width: 100%;
+    height: 50%;
+  }
+}
+.mainInicio .sectionActividades .containerActiv .containInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 60%;
+  position: relative;
+  flex-direction: column;
+  background-color: black;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.mainInicio .sectionActividades .containerActiv .containInfo h3 {
   color: white;
-  position: absolute;
-  top: 20%;
-  left: 40px;
-  transform: translate(-20%, -50%);
-  font-size: 30px;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 20px;
+  margin-top: 0.5em;
+  font-weight: 600;
 }
-.actividad .textActividad2 {
-  top: 75%;
-  left: 50px;
+.mainInicio .sectionActividades .containerActiv .containInfo p {
+  color: #a1a4a7;
+  font-size: 16px;
 }
 @media (max-width: 768px) {
-  .actividad .textActividad, .actividad .textActividad2 {
-    font-size: 25px;
-    left: 30px;
+  .mainInicio .sectionActividades .containerActiv .containInfo h3 {
+    font-size: 16px;
   }
-  .actividad .textActividad2 {
-    font-size: 25px;
-    left: 40px;
+  .mainInicio .sectionActividades .containerActiv .containInfo p {
+    font-size: 11px;
+  }
+}
+.mainInicio .sectionActividades .containerActiv .containInfo button {
+  width: 60%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  justify-self: flex-end;
+  margin: 10px 0 10px 0;
+  text-decoration: none;
+  background-color: black;
+  color: white;
+  font-size: 14px;
+}
+.mainInicio .sectionActividades .containerActiv .containInfo button:hover {
+  background-color: rgb(199, 12, 12);
+  color: white;
+}
+@media (max-width: 768px) {
+  .mainInicio .sectionActividades .containerActiv .containInfo button {
+    font-size: 11px;
+    height: 15%;
   }
 }
 @media (max-width: 425px) {
-  .actividad .textActividad, .actividad .textActividad2 {
-    position: absolute;
-    top: 20%;
-    left: 15%;
-    transform: translate(-20%, -50%);
-    font-size: 18px;
+  .mainInicio .sectionActividades .containerActiv {
+    width: 320px;
+    height: 280px;
   }
-  .actividad .textActividad2 {
-    position: absolute;
-    top: 80%;
-    left: 20%;
-    transform: translate(-20%, -50%);
-    font-size: 18px;
+}
+@media (max-width: 768px) {
+  .mainInicio .containerActiv {
+    width: 230px;
+    height: 260px;
+  }
+}
+@media (max-width: 425px) {
+  .mainInicio .sectionActividades {
+    flex-direction: column;
+    margin-top: 0;
   }
 }
 
 @media (max-width: 425px) {
   .img-fluid {
-    height: 110%;
+    object-fit: fill;
+    width: 100%;
+    height: 100%;
   }
   .actividad {
-    width: 190px;
-    height: 100px;
+    width: 390px;
+    height: 130px;
     position: relative;
     display: inline-block;
-    border-radius: 1.5em;
+    border-radius: 1em;
     overflow: hidden;
     padding: none !important;
   }
@@ -164,11 +229,58 @@
   display: grid;
   grid-template-rows: repeat(4, auto);
 }
-.mainHorarios .horariosMusculacion {
-  text-align: center;
-  justify-content: center;
-  color: white;
+.mainHorarios .imgHorarios {
+  width: 100%;
+  height: 350px;
+}
+@media (max-width: 768px) {
+  .mainHorarios .imgHorarios {
+    height: 280px;
+  }
+}
+.mainHorarios h3 {
+  margin-left: 1em;
+  margin-top: 1em;
   font-size: 20px;
+  display: inline-block;
+  margin-left: 75px;
+}
+.mainHorarios p {
+  margin-left: 1em;
+  margin-top: 1em;
+  font-size: 20px;
+  display: inline-block;
+}
+@media (max-width: 425px) {
+  .mainHorarios p {
+    font-size: 12px;
+    text-align: center;
+  }
+}
+.mainHorarios .horariosMusculacion {
+  color: white;
+}
+@media (max-width: 768px) {
+  .mainHorarios h3 {
+    margin-left: none;
+    margin-top: 1em;
+    font-size: 16px;
+  }
+  .mainHorarios p {
+    margin-left: 1em;
+    margin-top: 1em;
+    font-size: 14px;
+  }
+}
+@media (max-width: 425px) {
+  .mainHorarios .horariosMusculacion {
+    display: inline-flex;
+    margin-left: -5.8em;
+  }
+  .mainHorarios h3 {
+    font-size: 12px;
+    text-align: center;
+  }
 }
 .mainHorarios table {
   width: 100%;
@@ -182,23 +294,64 @@
   height: 80px;
   background-color: rgb(199, 12, 12);
 }
+@media (max-width: 768px) {
+  .mainHorarios table .cabecera {
+    height: 30px;
+  }
+}
 .mainHorarios table th,
 .mainHorarios table td {
   border: 1px solid;
 }
 .mainHorarios table tr:hover {
   background-color: rgb(199, 12, 12);
+  font-weight: 600;
   color: black;
+}
+@media (max-width: 768px) {
+  .mainHorarios table {
+    margin-left: none;
+    margin-top: 0.5em;
+    font-size: 12px;
+    border: solid white;
+  }
+}
+@media (max-width: 425px) {
+  .mainHorarios table {
+    font-size: 10px;
+  }
+}
+@media (max-width: 425px) and (max-width: 425px) {
+  .mainHorarios .imgHorarios {
+    height: 150px;
+  }
 }
 
 .mainInst {
   display: grid;
   grid-template-rows: repeat(9, auto);
+  /*Propiedades de las sections*/
+}
+.mainInst .imgInicio {
+  width: 100%;
+  height: 350px;
+  margin-bottom: 1em;
+}
+@media (max-width: 768px) {
+  .mainInst .imgInicio {
+    width: 100%;
+    height: 280px;
+  }
+}
+@media (max-width: 425px) {
+  .mainInst .imgInicio {
+    height: 150px;
+  }
 }
 .mainInst .section {
-  display: flex;
   width: auto;
   height: 200px;
+  display: flex;
 }
 .mainInst .section .imgSection {
   width: 0px;
@@ -215,91 +368,176 @@
   filter: contrast(100%);
 }
 @media (max-width: 768px) {
-  .mainInst .imgGimnasio {
-    width: 200px;
-    height: 200px;
+  .mainInst .section {
+    height: 150px;
+  }
+  .mainInst .imgSection {
+    height: 150px;
   }
 }
 @media (max-width: 425px) {
-  .mainInst .imgGimnasio {
-    width: 190px;
-    height: 150px;
+  .mainInst .section {
+    height: 110px;
   }
+  .mainInst .imgSection {
+    height: 110px;
+  }
+}
+
+.imgNosotros {
+  width: 100%;
+  height: 350px;
 }
 
 .nosotros, .nosotros .porqNosotros {
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: auto;
-  height: 340px;
+  justify-content: space-evenly;
+  width: 100%;
+  margin-top: 1em;
+  /*USO DE EXTENDS*/
 }
 .nosotros .porqNosotros {
   width: 280px;
-  height: 300px;
-  flex-wrap: wrap;
-  color: white;
-  font-size: 18px;
-  font-family: Arial, Helvetica, sans-serif;
-  text-align: center;
-  margin: 1em;
-}
-
-.containerProfesores {
-  width: auto;
+  height: 295px;
+  margin-top: none;
   flex-direction: column;
-}
-.containerProfesores .contenedor {
-  width: auto;
-  display: flex;
-  justify-content: center;
-}
-.containerProfesores .contenedor .profesor {
-  width: 210px;
-  height: 300px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
   color: white;
+}
+.nosotros .itemPorqueNosotros {
+  width: 110px;
+  height: 110px;
+}
+@media (max-width: 768px) {
+  .nosotros .itemPorqueNosotros {
+    width: 80px;
+    height: 80px;
+  }
+  .nosotros .porqNosotros {
+    width: 210px;
+    height: 180px;
+  }
+}
+@media (max-width: 425px) {
+  .nosotros .itemPorqueNosotros {
+    width: 60px;
+    height: 60px;
+  }
+  .nosotros .porqNosotros {
+    width: 130px;
+    height: 140px;
+  }
+}
+.nosotros p, .nosotros .porqNosotros p {
   font-size: 18px;
   text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 0.3em;
+}
+@media (max-width: 768px) {
+  .nosotros p, .nosotros .porqNosotros p {
+    font-size: 11px;
+  }
+}
+@media (max-width: 425px) {
+  .nosotros p, .nosotros .porqNosotros p {
+    font-size: 8px;
+  }
 }
 
+/*propiedades del section*/
+.section {
+  display: flex;
+  width: auto;
+}
+.section .imgSection {
+  width: 0px;
+  flex-grow: 1;
+  object-fit: cover;
+  opacity: 0.4;
+  transition: 0.5s ease;
+  border-radius: 1em;
+  margin: 0.2em;
+}
+.section .imgSection:hover {
+  cursor: crosshair;
+  opacity: 14;
+  filter: contrast(100%);
+}
+
+@media (max-width: 768px) {
+  .imgNosotros {
+    height: 280px;
+  }
+}
+@media (max-width: 425px) {
+  .imgNosotros {
+    height: 150px;
+  }
+  .section {
+    height: 130px;
+  }
+  .imgSection {
+    height: 120px;
+  }
+}
 .mainHorarios {
   display: grid;
   grid-template-rows: repeat(4, auto);
 }
+.mainHorarios .imgContactanos {
+  width: 100%;
+  height: 350px;
+}
+@media (max-width: 768px) {
+  .mainHorarios .imgContactanos {
+    height: 250px;
+  }
+}
+@media (max-width: 425px) {
+  .mainHorarios .imgContactanos {
+    height: 150px;
+  }
+}
 .mainHorarios .textoFormulario {
-  height: 95px;
+  height: 120px;
   text-align: center;
   font-size: 18px;
-  font-weight: 900;
+  font-weight: 700;
   color: white;
-  margin-top: 1em;
+}
+@media (max-width: 768px) {
+  .mainHorarios .textoFormulario {
+    height: 50px;
+    margin-top: 1em;
+  }
+  .mainHorarios p {
+    margin: 0 !important;
+    font-size: 14px;
+  }
+}
+@media (max-width: 425px) {
+  .mainHorarios .textoFormulario {
+    height: 55px;
+  }
+  .mainHorarios p {
+    margin: 0 !important;
+    font-size: 10px;
+  }
 }
 .mainHorarios .UbicYFormulario {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   height: auto;
-  justify-content: space-between;
   align-items: center;
 }
-.mainHorarios .UbicYFormulario .mapaUbicacion {
-  width: 400px;
-  height: auto;
-}
 .mainHorarios .UbicYFormulario .formulario {
-  background-color: rgb(199, 12, 12);
-  margin-top: 1em;
-  color: white;
-  width: 500px;
+  width: 90%;
   height: auto;
-  padding: 1em;
+  background-color: rgb(199, 12, 12);
+  color: white;
   text-align: center;
   font-weight: 900;
+  border: solid 8px white;
 }
 .mainHorarios .UbicYFormulario .formulario .datosFormulario {
   display: flex;
@@ -307,69 +545,80 @@
   align-items: center;
 }
 .mainHorarios .UbicYFormulario .formulario .datosFormulario input {
-  margin-top: 1em;
-  width: 460px;
-  height: 30px;
+  width: 90%;
+  height: 35px;
+  margin-bottom: 1em;
   font-size: 18px;
   padding-left: 1em;
   border: none;
   border-radius: 0.5em;
 }
+@media (max-width: 768px) {
+  .mainHorarios .UbicYFormulario .formulario .datosFormulario input {
+    height: 25px;
+    font-size: 14px;
+  }
+}
 .mainHorarios .UbicYFormulario .formulario .datosFormulario .selecActividad {
-  height: 30px;
-  width: 400px;
+  width: 80%;
+  height: 50px;
   font-size: 18px;
   padding-left: 1em;
   border: none;
   border-radius: 0.5em;
+}
+@media (max-width: 768px) {
+  .mainHorarios .UbicYFormulario .formulario .datosFormulario .selecActividad {
+    height: 25px;
+    font-size: 14px;
+  }
 }
 .mainHorarios .UbicYFormulario .formulario .datosFormulario textarea {
   margin-top: 1em;
   padding: 1em;
   font-size: 18px;
-  width: 460px;
+  width: 90%;
   border: none;
   border-radius: 0.5em;
 }
 .mainHorarios .UbicYFormulario .formulario .datosFormulario .buttonTextarea {
+  width: 200px;
+  height: 40px;
   background-color: black;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 1em;
-  height: 30px;
-  width: 200px;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
   font-size: 18px;
+  font-weight: 600;
   color: white;
   border-radius: 0.5em;
   border: none;
   cursor: pointer;
 }
-.mainHorarios .datosContactos {
-  width: auto;
-  height: 130px;
-  margin-top: 3em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
+@media (max-width: 768px) {
+  .mainHorarios .formulario {
+    width: 90%;
+    margin-bottom: 0;
+  }
 }
-.mainHorarios .datosContactos .dato {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 200px;
-  height: 130px;
-  font-size: 18px;
-  margin: 1em;
+.mainHorarios .mapaUbicacion {
+  width: 90%;
+  height: 275px;
+  margin-top: 1em;
+  border: solid 8px rgb(199, 12, 12);
 }
-.mainHorarios .datosContactos .dato:hover {
-  color: rgb(199, 12, 12);
-  font-size: 20px;
-  font-weight: 600;
+@media (max-width: 768px) {
+  .mainHorarios .mapaUbicacion {
+    height: 180px;
+  }
+  .mainHorarios iframe {
+    height: 165px;
+  }
 }
 
+/*MIXINS*/
 * {
   font-family: Arial, Helvetica, sans-serif;
   box-sizing: border-box;
@@ -385,14 +634,15 @@ body {
 /* ------------------------ HEADER ------------------------------------ */
 .header {
   width: auto;
-  height: 110px;
+  height: 120px;
+  display: flex;
+  justify-content: space-around;
+  align-items: none;
   background-color: black;
   z-index: 10;
   top: 0;
   left: 0;
   box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: space-around;
   /*Estilos del boton menu*/
 }
 .header .logoSportgym {
@@ -401,20 +651,21 @@ body {
 }
 .header .logoSportgym .logo {
   width: 250px;
-  margin-top: 0.5em;
+  height: 80px;
+  margin-top: 1em;
 }
 @media (max-width: 768px) {
   .header .logoSportgym .logo {
-    width: 200px;
+    width: 180px;
+    height: 60px;
     margin-top: 1em;
   }
 }
 @media (max-width: 425px) {
   .header .logoSportgym .logo {
-    width: 180px;
-  }
-  .header .logoSportgym .header {
-    background-color: aqua;
+    width: 160px;
+    height: 50px;
+    margin-top: 0.2em;
   }
 }
 .header .menu {
@@ -460,35 +711,48 @@ body {
 @media (max-width: 425px), (max-width: 768px) {
   .header .buttonMenu {
     display: block;
-    margin-top: 40px;
+    margin-top: 30px;
   }
   .header .menu {
-    position: absolute;
-    background-color: rgb(15, 14, 14);
     width: 100%;
-    height: 160px;
-    top: 110px;
-    left: 0;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+    flex-direction: column;
+    background-color: black;
+    top: 90px;
     transition: all 500ms ease;
     transform: translateX(-100%);
-    display: flex;
-    flex-direction: column;
   }
   .header #btn-menu:checked ~ .menu {
     transform: translateX(0%);
   }
   .header .menu a {
     display: block;
-    margin-top: 10px;
+    padding: 10px;
+    font-size: 24px;
   }
 }
 
+@media (max-width: 768px) {
+  .header {
+    height: 90px;
+  }
+}
+@media (max-width: 425px) {
+  .header {
+    height: 90px;
+  }
+}
 /* ------------------------ TITULOS H1 DE TODAS LAS PAG ------------------------------------ */
 .titulos {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 .titulos h1 {
   color: white;
@@ -506,7 +770,6 @@ body {
 @media (max-width: 768px) {
   .titulos {
     margin: 0;
-    margin-top: 0.5em;
   }
   .titulos h1 {
     font-size: 15px;
@@ -515,6 +778,7 @@ body {
   }
   .titulos .lineaRoja {
     width: 100px;
+    border-width: 3px;
   }
 }
 @media (max-width: 425px) {
@@ -529,17 +793,17 @@ body {
   }
   .titulos .lineaRoja {
     width: 50px;
-    border-width: 3px;
+    border-width: 2px;
   }
 }
 /* ------------------------ FOOTER ------------------------------------ */
 footer {
   width: auto;
-  height: 130px;
+  height: 150px;
   display: flex;
   justify-content: space-between;
-  margin-top: 2em;
   align-items: center;
+  margin-top: 2em;
   background-color: rgb(10, 10, 10);
 }
 footer .contFooter1 {
@@ -553,46 +817,57 @@ footer .contFooter1 {
 }
 @media (max-width: 768px) {
   footer .contFooter1 {
-    width: 100px;
+    width: 150px;
     height: 100px;
   }
 }
+@media (max-width: 425px) {
+  footer .contFooter1 {
+    width: 120px;
+    height: 60px;
+  }
+}
 footer .contFooter2 {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
   width: auto;
   flex-direction: column;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
   margin-right: 2em;
-  margin-top: 1em;
 }
 footer .dato {
   display: flex;
-  justify-content: flex-end;
   color: white;
   font-size: 12px;
-  text-align: center;
 }
-footer .iconoFooter {
-  width: 20px;
-  height: 20px;
+footer .dato p {
+  display: block;
+}
+@media (max-width: 425px) {
+  footer .dato p {
+    display: none;
+  }
 }
 @media (max-width: 768px) {
   footer .dato {
-    font-size: 10px;
+    font-size: 8px;
   }
-  footer .iconoFooter {
-    width: 18px;
-    height: 18px;
+}
+
+@media (max-width: 768px) {
+  footer {
+    height: 120px;
   }
 }
 @media (max-width: 425px) {
-  footer .dato {
-    font-size: 8px;
+  footer {
+    height: 90px;
   }
-  footer .iconoFooter {
-    width: 12px;
-    height: 12px;
+  .dato {
+    margin: 0.2em;
+  }
+  .iconoFooter {
+    width: 10px;
   }
 }
 

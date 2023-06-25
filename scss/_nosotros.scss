@@ -1,44 +1,98 @@
+@mixin tamanos($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+.imgNosotros {
+  @include tamanos(100%, 350px);
+}
+
 .nosotros {
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: auto;
-  height: 340px;
+  justify-content: space-evenly;
+  width: 100%;
+  margin-top: 1em;
 
+  /*USO DE EXTENDS*/
   .porqNosotros {
     @extend .nosotros;
-    width: 280px;
-    height: 300px;
-    flex-wrap: wrap;
+    @include tamanos(280px, 295px);
+    margin-top: none;
+    flex-direction: column;
+    align-items: center;
     color: white;
+  }
+
+  .itemPorqueNosotros {
+    @include tamanos(110px, 110px);
+  }
+  @media (max-width: 768px) {
+    .itemPorqueNosotros {
+      @include tamanos(80px, 80px);
+    }
+    .porqNosotros {
+      @include tamanos(210px, 180px);
+    }
+  }
+  @media (max-width: 425px) {
+    .itemPorqueNosotros {
+      @include tamanos(60px, 60px);
+    }
+    .porqNosotros {
+      @include tamanos(130px, 140px);
+    }
+  }
+
+  p {
     font-size: $fuentePpal;
-    font-family: Arial, Helvetica, sans-serif;
     text-align: center;
-    margin: 1em;
+  }
+  @media (max-width: 768px) {
+    p {
+      font-size: 11px;
+    }
+  }
+  @media (max-width: 425px) {
+    p {
+      font-size: 8px;
+    }
+  }
+}
+/*propiedades del section*/
+.section {
+  display: flex;
+  width: auto;
+
+  .imgSection {
+    width: 0px;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: 0.4;
+    transition: 0.5s ease;
+    border-radius: 1em;
+    margin: 0.2em;
+    &:hover {
+      cursor: crosshair;
+      opacity: 14;
+      filter: contrast(100%);
+    }
   }
 }
 
-.containerProfesores {
-  width: auto;
-  flex-direction: column;
-
-  .contenedor {
-    width: auto;
-    display: flex;
-    justify-content: center;
-
-    .profesor {
-      width: 210px;
-      height: 300px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      color: white;
-      font-size: $fuentePpal;
-      text-align: center;
-      font-family: Arial, Helvetica, sans-serif;
-      margin: 0.3em;
-    }
+@media (max-width: 768px) {
+  .imgNosotros {
+    height: 280px;
+  }
+}
+@media (max-width: 425px) {
+  .imgNosotros {
+    height: 150px;
+  }
+  .section {
+    height: 130px;
+  }
+  .imgSection {
+    height: 120px;
   }
 }

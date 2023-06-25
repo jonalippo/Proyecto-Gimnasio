@@ -10,46 +10,33 @@
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="../css/styles.css" />
-  <link rel="shortcut icon" href="../images/faviconSportgym.png" type="image/x-icon">
-  <title>Horarios</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="shortcut icon" href="../images/LogoManc.jpg" type="image/x-icon">
+  <title>Horarios de clases</title>
 </head>
 
 <body>
-  <div class="container">
-    <header id="inicio">
-      <a href="/index.html">
-        <img class="logo" src="../images/logoSportgym.png" alt="Logo Sportsgym" /></a>
-
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav navbar-nav">
-            <li class="nav-item active">
-              <a href="../pages/inicio.html" class="buttonNav" style="width: 100px;">INICIO</a>
-            </li>
-            <li class="nav-item">
-              <a href="../pages/horarios.html" class="buttonNav">HORARIOS</a>
-            </li>
-            <li class="nav-item">
-              <a href="../pages/instalaciones.html" class="buttonNav">INSTALACIONES</a>
-            </li>
-            <li class="nav-item">
-              <a href="../pages/nosotros.html" class="buttonNav">NOSOTROS</a>
-            </li>
-            <li class="nav-item">
-              <a href="../pages/contactanos.html" class="buttonNav">CONTACTANOS</a>
-            </li>
-          </ul>
-        </div>
+  <div class="container-fluid">
+    <header class="header" id="inicio">
+      <div class="logoSportgym">
+        <a href="/index.html">
+          <img class="logo animate__animated animate__swing" src="../images/logoSportgym.png" alt="Logo Sportgym" /></a>
+      </div>
+      <div class="buttonMenu">
+        <label for="btn-menu">MENU</label>
+      </div>
+      <input type="checkbox" id="btn-menu">
+      <nav class="menu">
+        <a href="../pages/inicio.html">INICIO</a>
+        <a href="../pages/horarios.html">HORARIOS</a>
+        <a href="../pages/instalaciones.html">INSTALACIONES</a>
+        <a href="../pages/nosotros.html">NOSOTROS</a>
+        <a href="../pages/contactanos.html">CONTACTANOS</a>
       </nav>
-    </header>
+  </header>
 
     <main class="mainHorarios">
-      <img src="../images/sectHorarios.jpg" alt="imgInst" width="100%" height="400px">
+      <img src="../images/sectHorarios.jpg" alt="imgInst" class="imgHorarios animate__animated animate__pulse">
       
       <div class="titulos">
         <div class="lineaRoja"></div>
@@ -232,7 +219,7 @@
     <footer>
       <div class="contFooter1">
       </div>
-      <a href="#inicio"><img src="../images/iconoFelecha.png" alt="flecha" width="40px"></a>
+      <a href="#inicio"><img src="../images/iconoFelecha.png" alt="flecha" width="30px"></a>
       <div class="contFooter2">
         <div class="dato">
           <img src="../images/iconoUbicacion.png" alt="iconoUbicacion" width="20px" height="20px" />

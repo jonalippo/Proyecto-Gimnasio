@@ -6,50 +6,57 @@
 @import "nosotros";
 @import "contactanos";
 
+/*MIXINS*/
+@mixin flex($display, $justify, $align) {
+  display: $display;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin tamanos($width, $height) {
+  width: $width;
+  height: $height;
+}
+
 * {
   font-family: Arial, Helvetica, sans-serif;
   box-sizing: border-box;
 }
 
 body {
-  width: 100%;
-  height: auto;
+  @include tamanos(100%, auto);
   margin: 0;
   background-color: $colorFondo;
 }
 
 /* ------------------------ HEADER ------------------------------------ */
 .header {
-  width: auto;
-  height: 110px;
+  @include tamanos(auto, 120px);
+  @include flex(flex, space-around, none);
   background-color: $colorFondo;
   z-index: 10;
   top: 0;
   left: 0;
   box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: space-around;
 
   .logoSportgym {
     float: left;
     line-height: 75px;
 
     .logo {
-      width: 250px;
-      margin-top: 0.5em;
+      @include tamanos(250px, 80px);
+      margin-top: 1em;
     }
     @media (max-width: 768px) {
       .logo {
-        width: 200px;
+        @include tamanos(180px, 60px);
         margin-top: 1em;
       }
     }
     @media (max-width: 425px) {
       .logo {
-        width: 180px;
-      }
-      .header {
-        background-color: aqua;
+        @include tamanos(160px, 50px);
+        margin-top: 0.2em;
       }
     }
   }
@@ -100,19 +107,18 @@ body {
   @media (max-width: 425px), (max-width: 768px) {
     .buttonMenu {
       display: block;
-      margin-top: 40px;
+      margin-top: 30px;
     }
     .menu {
+      @include tamanos(100%, 250px);
+      @include flex(flex, center, center);
       position: absolute;
-      background-color: rgb(15, 14, 14);
-      width: 100%;
-      height: 160px;
-      top: 110px;
-      left: 0;
+      z-index: 1;
+      flex-direction: column;
+      background-color: $colorFondo;
+      top: 90px;
       transition: all 500ms ease;
       transform: translateX(-100%);
-      display: flex;
-      flex-direction: column;
     }
 
     #btn-menu:checked ~ .menu {
@@ -120,18 +126,27 @@ body {
     }
     .menu a {
       display: block;
-      margin-top: 10px;
+      padding: 10px;
+      font-size: 24px;
     }
+  }
+}
+@media (max-width: 768px) {
+  .header {
+    height: 90px;
+  }
+}
+@media (max-width: 425px) {
+  .header {
+    height: 90px;
   }
 }
 
 /* ------------------------ TITULOS H1 DE TODAS LAS PAG ------------------------------------ */
 
 .titulos {
-  display: flex;
+  @include flex(flex, center, center);
   flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
 
   h1 {
     color: white;
@@ -151,7 +166,6 @@ body {
 @media (max-width: 768px) {
   .titulos {
     margin: 0;
-    margin-top: 0.5em;
 
     h1 {
       font-size: 15px;
@@ -161,6 +175,7 @@ body {
 
     .lineaRoja {
       width: 100px;
+      border-width: 3px;
     }
   }
 }
@@ -178,24 +193,20 @@ body {
 
     .lineaRoja {
       width: 50px;
-      border-width: 3px;
+      border-width: 2px;
     }
   }
 }
 
 /* ------------------------ FOOTER ------------------------------------ */
 footer {
-  width: auto;
-  height: 130px;
-  display: flex;
-  justify-content: space-between;
+  @include tamanos(auto, 150px);
+  @include flex(flex, space-between, center);
   margin-top: 2em;
-  align-items: center;
   background-color: rgb(10, 10, 10);
 
   .contFooter1 {
-    width: 180px;
-    height: 100px;
+    @include tamanos(180px, 100px);
     background-image: url(../images/logoSportgym.png);
     background-position: center center;
     background-size: contain;
@@ -204,173 +215,54 @@ footer {
   }
   @media (max-width: 768px) {
     .contFooter1 {
-      width: 100px;
-      height: 100px;
-    }
-  }
-  .contFooter2 {
-    width: auto;
-    flex-direction: column;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    margin-right: 2em;
-    margin-top: 1em;
-  }
-  .dato {
-    display: flex;
-    justify-content: flex-end;
-    color: white;
-    font-size: 12px;
-    text-align: center;
-  }
-  .iconoFooter{
-    width: 20px;
-    height: 20px; 
-  }
-  @media (max-width: 768px) {
-    .dato {
-      font-size: 10px;
-    }
-    .iconoFooter{
-      width: 18px;
-      height: 18px;
+      @include tamanos(150px, 100px);
     }
   }
   @media (max-width: 425px) {
+    .contFooter1 {
+      @include tamanos(120px, 60px);
+    }
+  }
+  .contFooter2 {
+    @include flex(flex, center, flex-end);
+    width: auto;
+    flex-direction: column;
+    margin-right: 2em;
+  }
+
+  .dato {
+    display: flex;
+    color: white;
+    font-size: 12px;
+
+    p {
+      display: block;
+    }
+    @media (max-width: 425px) {
+      p {
+        display: none;
+      }
+    }
+  }
+  @media (max-width: 768px) {
     .dato {
       font-size: 8px;
     }
-    .iconoFooter{
-      width: 12px;
-      height: 12px;
-    }
   }
 }
-
-// header {
-//   background-color: $colorFondo;
-//   width: 100%;
-//   height: 120px;
-//   display: flex;
-//   align-items: center;
-//   justify-content: space-evenly;
-//   box-sizing: border-box;
-
-//   /*Estilo Nav*/
-//   ul {
-//     width: 700px;
-//     height: 30px;
-//     display: flex;
-//     flex-direction: row;
-//     align-items: center;
-//     justify-content: space-evenly;
-//   }
-
-//   .buttonNav {
-//     height: 30px;
-//     width: 150px;
-//     padding: 0.2em;
-//     font-size: $fuentePpal;
-//     color: white;
-//     background-color: $colorFondo;
-//     border-radius: 0.5em;
-//     border: none;
-//     cursor: pointer;
-//     text-decoration-line: none;
-//     &:hover {
-//       color: $colorSecundario;
-//       font-size: 25px;
-//     }
-//   }
-
-//   .navbar {
-//     padding: 0;
-//     background-color: $colorFondo !important;
-//   }
-
-//   .navbar-toggler-icon {
-//     background-color: transparent;
-//     border-radius: 30%;
-//     width: 40px;
-//     height: 40px;
-//     color: #ffffff;
-//     border: solid white;
-//     background-image: url(../images/MenuHamburguesa.png) !important;
-//   }
-
-//   .navbar-collapse {
-//     flex-basis: 0 !important;
-//   }
-
-//   .navbar-expand-lg {
-//     height: 100%;
-//     position: relative;
-//   }
-
-//   .navbar-nav {
-//     display: flex;
-//     align-items: end;
-//     background-color: $colorFondo;
-//     top: 0;
-//     height: auto;
-//     justify-content: center;
-//   }
-
-//   @media (max-width: 425px) {
-//     .navbar-toggler-icon {
-//       width: 35px;
-//       height: 35px;
-//     }
-
-//     .navbar-nav {
-//       display: flex;
-//       align-items: end;
-//       background-color: $colorFondo;
-//       top: 0;
-//       height: auto;
-//       width: 170px;
-//       justify-content: center;
-//     }
-//   }
-
-//   li {
-//     margin: 0.5em;
-//   }
-
-//   /*Estilo logo*/
-//   .logo {
-//     width: 250px;
-//     height: 90px;
-//     cursor: pointer;
-//   }
-
-//   @media (max-width: 425px) {
-//     .logo {
-//       width: 200px;
-//       height: 80px;
-//       margin-left: 1.5em;
-//     }
-//   }
-// }
-
-// @media (max-width: 768px) {
-//   header {
-//     flex-direction: row;
-//     height: 110px;
-//     margin-top: 1em;
-//     display: flex;
-//     justify-content: space-between;
-//     width: 100%;
-
-//     nav {
-//       margin-top: 0.5em;
-//       display: flex;
-//       align-items: center;
-//     }
-
-//     .navbar-nav {
-//       width: 200px;
-//     }
-//   }
-// }
+@media (max-width: 768px) {
+  footer {
+    height: 120px;
+  }
+}
+@media (max-width: 425px) {
+  footer {
+    height: 90px;
+  }
+  .dato {
+    margin: 0.2em;
+  }
+  .iconoFooter {
+    width: 10px;
+  }
+}

@@ -1,3 +1,14 @@
+@mixin tamanos($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin flex($display, $justify, $align) {
+  display: $display;
+  justify-content: $justify;
+  align-items: $align;
+}
+
 .bodyIndex {
   background-image: url(../images/fachada2.1.jpg);
   background-position: top right;
@@ -5,15 +16,13 @@
   background-size: cover;
 
   .mainIndex {
-    display: flex;
-    align-items: center;
+    @include flex(flex, none, center);
     flex-direction: column;
     height: auto;
     margin-top: 50px;
 
     .logoIndex {
-      width: 900px;
-      height: 300px;
+      @include tamanos(900px, 300px);
       background-image: url(../images/logoSportgym.png);
       background-position: center center;
       background-size: contain;
@@ -21,33 +30,27 @@
     }
     @media (max-width: 768px) {
       .logoIndex {
-        width: 600px;
-        height: 250px;
+        @include tamanos(600px, 250px);
         margin-top: 5px;
       }
     }
     @media (max-width: 425px) {
       .logoIndex {
-        width: 350px;
-        height: 250px;
+        @include tamanos(350px, 250px);
       }
       .buttonMain {
-        height: 30px;
-        width: 200px;
+        @include tamanos(200px, 30px);
       }
     }
 
     .buttonMain {
-      display: flex;
-      height: 60px;
-      width: 320px;
+      @include tamanos(320px, 60px);
+      @include flex(flex, center, center);
       padding: 0.2em;
       font-size: 26px;
       font-weight: 700;
       color: white;
       border: solid $colorSecundario 4px;
-      justify-content: center;
-      align-items: center;
       cursor: pointer;
       text-decoration-line: none;
       margin-top: 3em;
@@ -59,8 +62,7 @@
     }
     @media (max-width: 425px), (max-width: 768px) {
       .buttonMain {
-        height: 40px;
-        width: 300px;
+        @include tamanos(300px, 40px);
         margin-top: 1em;
         font-weight: 600;
       }
@@ -68,12 +70,9 @@
   }
 }
 .contFooterIndex {
+  @include flex(flex, space-evenly, center);
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
 }
 .iconoFooterIndex {
-  width: 40px;
-  height: 40px;
+  @include tamanos(40px, 40px);
 }

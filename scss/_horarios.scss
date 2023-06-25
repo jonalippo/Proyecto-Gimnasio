@@ -1,12 +1,63 @@
+@mixin tamanos($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin margin-font($margin-left, $margin-top, $font-size) {
+  margin-left: $margin-left;
+  margin-top: $margin-top;
+  font-size: $font-size;
+}
+
 .mainHorarios {
   display: grid;
   grid-template-rows: repeat(4, auto);
 
+  .imgHorarios {
+    @include tamanos(100%, 350px);
+  }
+  @media(max-width:768px){
+    .imgHorarios {
+      height: 280px;
+    }
+  }
+
+  h3 {
+    @include margin-font(1em, 1em, 20px);
+    display: inline-block;
+    margin-left: 75px;
+  }
+  p {
+    @include margin-font(1em, 1em, 20px);
+    display: inline-block;
+  }
+  @media(max-width:425px){
+    p {
+      font-size: 12px;
+      text-align: center;
+    }
+  }
+
   .horariosMusculacion {
-    text-align: center;
-    justify-content: center;
     color: white;
-    font-size: 20px;
+  }
+  @media (max-width: 768px) {
+    h3 {
+      @include margin-font(none, 1em, 16px);
+    }
+    p {
+      @include margin-font(1em, 1em, 14px);
+    }
+  }
+  @media (max-width: 425px) {
+    .horariosMusculacion {
+      display: inline-flex;
+      margin-left: -5.8em;
+    }
+    h3 {
+      font-size: 12px;
+      text-align: center;
+    }
   }
 
   table {
@@ -21,14 +72,35 @@
       height: 80px;
       background-color: $colorSecundario;
     }
-
+    @media (max-width: 768px) {
+      .cabecera {
+        height: 30px;
+      }
+    }
     th,
     td {
       border: 1px solid;
     }
     tr:hover {
       background-color: $colorSecundario;
+      font-weight: 600;
       color: $colorFondo;
+    }
+  }
+  @media (max-width: 768px) {
+    table {
+      @include margin-font(none, 0.5em, 12px);
+      border: solid white;
+    }
+  }
+  @media (max-width: 425px) {
+    table {
+      font-size: 10px;
+    }
+    @media (max-width: 425px) {
+      .imgHorarios {
+        height: 150px;
+      }
     }
   }
 }

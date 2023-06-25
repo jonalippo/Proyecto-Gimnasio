@@ -1,86 +1,150 @@
+@mixin tamanos($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin font-left($font-size, $left) {
+  font-size: $font-size;
+  left: $left;
+}
+
+@mixin flex($display, $justify, $align) {
+  display: $display;
+  justify-content: $justify;
+  align-items: $align;
+}
+
 /* ------------------------ MAIN ------------------------------------ */
 .mainInicio {
   display: grid;
   grid-template-rows: repeat(5, auto);
-}
 
-.imgInicio {
-  height: 350px;
-  width: 100%;
-  display: flex;
-  justify-self: center;
-}
-@media (max-width: 768px) {
+  @media (max-width: 425px) {
+    .imgInicio {
+      @include tamanos(100%, 80%);
+    }
+  }
   .imgInicio {
-    width: 90%;
-    height: 90%;
-    margin-top: 0.5em;
-  }
-}
-
-.actividad {
-  position: relative;
-  display: inline-block;
-  text-align: center;
-  border-radius: 1em;
-  overflow: hidden;
-  padding: none !important;
-
-  .textActividad {
-    color: white;
-    position: absolute;
-    top: 20%;
-    left: 40px;
-    transform: translate(-20%, -50%);
-    font-size: 30px;
-    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  }
-
-  .textActividad2 {
-    @extend .textActividad;
-    top: 75%;
-    left: 50px;
+    @include tamanos(100%, 350px);
+    @include flex(flex, center, none);
   }
 
   @media (max-width: 768px) {
-    .textActividad {
-      font-size: 25px;
-      left: 30px;
+    .imgInicio {
+      @include tamanos(90%, 90%);
     }
-    .textActividad2 {
-      font-size: 25px;
-      left: 40px;
+  }
+
+  /*Propiedades del section*/
+
+  .sectionActividades {
+    @include flex(flex, center, center);
+    height: auto;
+    margin-top: 0.5em;
+
+    .containerActiv {
+      @include flex(flex, center, center);
+      @include tamanos(300px, 350px);
+      flex-direction: column;
+      text-align: center;
+      margin: 0.8em;
+      &:hover {
+        box-shadow: 5px 10px 20px 1px rgba(255, 255, 255, 0.273); /*Efecto de las cards*/
+        transition: all 0.4s linear; /*Transicion de los efectos*/
+      }
+
+      .imgActividad {
+        @include tamanos(100%, 40%);
+      }
+      @media (max-width: 425px) {
+        .imgActividad {
+          @include tamanos(100%, 50%);
+        }
+      }
+
+      .containInfo {
+        @include flex(flex, space-between, center);
+        @include tamanos(100%, 60%);
+        position: relative;
+        flex-direction: column;
+        background-color: $colorFondo;
+        padding: 0%;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+
+        h3 {
+          color: white;
+          font-size: 20px;
+          margin-top: 0.5em;
+          font-weight: 600;
+        }
+        p {
+          color: #a1a4a7;
+          font-size: 16px;
+        }
+
+        @media (max-width: 768px) {
+          h3 {
+            font-size: 16px;
+          }
+          p {
+            font-size: 11px;
+          }
+        }
+        button {
+          @include tamanos(60%, 20%);
+          @include flex(flex, center, center);
+          border-radius: 5px;
+          justify-self: flex-end;
+          margin: 10px 0 10px 0;
+          text-decoration: none;
+          background-color: $colorFondo;
+          color: white;
+          font-size: 14px;
+          &:hover {
+            background-color: $colorSecundario;
+            color: white;
+          }
+        }
+        @media (max-width: 768px) {
+          button {
+            font-size: 11px;
+            height: 15%;
+          }
+        }
+      }
+    }
+    @media (max-width: 425px) {
+      .containerActiv {
+        @include tamanos(320px, 280px);
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .containerActiv {
+      @include tamanos(230px, 260px);
     }
   }
   @media (max-width: 425px) {
-    .textActividad {
-      position: absolute;
-      top: 20%;
-      left: 15%;
-      transform: translate(-20%, -50%);
-      font-size: 18px;
-    }
-    .textActividad2 {
-      position: absolute;
-      top: 80%;
-      left: 20%;
-      transform: translate(-20%, -50%);
-      font-size: 18px;
-   
+    .sectionActividades {
+      flex-direction: column;
+      margin-top: 0;
     }
   }
 }
+
 @media (max-width: 425px) {
   .img-fluid {
-    height: 110%;
+    object-fit: fill;
+    @include tamanos(100%, 100%);
   }
   .actividad {
-    width: 190px;
-    height: 100px;
+    @include tamanos(390px, 130px);
     position: relative;
     display: inline-block;
-    border-radius: 1.5em;
+    border-radius: 1em;
     overflow: hidden;
-    padding: none !important; 
+    padding: none !important;
   }
 }

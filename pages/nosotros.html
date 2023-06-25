@@ -10,63 +10,50 @@
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="../css/styles.css">
-  <link rel="shortcut icon" href="../images/faviconSportgym.png" type="image/x-icon">
-  <title>Nosotros</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="shortcut icon" href="../images/LogoManc.jpg" type="image/x-icon">
+  <title>Conocenos más!</title>
 </head>
 
 <body>
-  <div class="container">
-    <header id="inicio">
-      <a href="/index.html">
-        <img class="logo" src="../images/logoSportgym.png" alt="Logo Sportsgym" /></a>
-
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav navbar-nav">
-            <li class="nav-item active">
-              <a href="../pages/inicio.html" class="buttonNav" style="width: 100px;">INICIO</a>
-            </li>
-            <li class="nav-item">
-              <a href="../pages/horarios.html" class="buttonNav">HORARIOS</a>
-            </li>
-            <li class="nav-item">
-              <a href="../pages/instalaciones.html" class="buttonNav">INSTALACIONES</a>
-            </li>
-            <li class="nav-item">
-              <a href="../pages/nosotros.html" class="buttonNav">NOSOTROS</a>
-            </li>
-            <li class="nav-item">
-              <a href="../pages/contactanos.html" class="buttonNav">CONTACTANOS</a>
-            </li>
-          </ul>
-        </div>
+  <div class="container-fluid">
+    <header class="header" id="inicio">
+      <div class="logoSportgym">
+        <a href="/index.html">
+          <img class="logo animate__animated animate__swing" src="../images/logoSportgym.png" alt="Logo Sportgym" /></a>
+      </div>
+      <div class="buttonMenu">
+        <label for="btn-menu">MENU</label>
+      </div>
+      <input type="checkbox" id="btn-menu">
+      <nav class="menu">
+        <a href="../pages/inicio.html">INICIO</a>
+        <a href="../pages/horarios.html">HORARIOS</a>
+        <a href="../pages/instalaciones.html">INSTALACIONES</a>
+        <a href="../pages/nosotros.html">NOSOTROS</a>
+        <a href="../pages/contactanos.html">CONTACTANOS</a>
       </nav>
     </header>
 
     <main class="mainHorarios">
-      <img src="../images/sectNosotros.jpg" alt="nosotros" width="100%" height="400px">
+      <img src="../images/sectNosotros.jpg" alt="nosotros" class="imgNosotros animate__animated animate__pulse">
       <div class="nosotros">
         <div class="porqNosotros">
-          <img src="../images/maquina.jpg" alt="maquina" width="130" height="130" />
+          <img src="../images/maquina.jpg" alt="maquina" class="itemPorqueNosotros" />
           <p>
             AMPLIAS INSTALACIONES <br />4 Zonas de entrenamiento y equipamiento
             de última generación.
           </p>
         </div>
         <div class="porqNosotros">
-          <img src="../images/mancuerna.jpg" alt="maquina" width="130" height="130" />
+          <img src="../images/mancuerna.jpg" alt="maquina" class="itemPorqueNosotros" />
           <p>
             GRAN VARIEDAD DE ACTIVIDADES DIRIGIDAS <br />
             Huye de la monotonia con nuestras clases!!.
           </p>
         </div>
         <div class="porqNosotros">
-          <img src="../images/reloj.jpg" alt="maquina" width="130" height="130" />
+          <img src="../images/reloj.jpg" alt="maquina" class="itemPorqueNosotros" />
           <p>
             AMPLIO HORARIO DE APERTURA<br />De mañana, por la tarde, o incluso a
             última hora. Organiza tu día y veni a entrenar!!.
@@ -79,44 +66,13 @@
         <div class="lineaRoja"></div>
       </div>
 
-      <div class="containerProfesores">
-        <div class="contenedor">
-          <div class="profesor">
-            <img src="../images/imgProfesor.jpg" alt="profesor1" width="200px" height="300px"/>
-            <p>JONATAN</p>
-          </div>
-          <div class="profesor">
-            <img src="../images/imgProfesor.jpg" alt="profesor1" width="200px" height="300px"/>
-            <p>NACHO. P</p>
-          </div>
-          <div class="profesor">
-            <img src="../images/imgProfesor.jpg" alt="profesor1" width="200px" height="300px"/>
-            <p>MARTIN</p>
-          </div>
-          <div class="profesor">
-            <img src="../images/imgProfesor.jpg" alt="profesor1" width="200px" height="300px"/>
-            <p>MAXI</p>
-          </div>
-        </div>
-        <div class="contenedor">
-          <div class="profesor">
-            <img src="../images/imgProfesor.jpg" alt="profesor1" width="200px" height="300px"/>
-            <p>SUSI</p>
-          </div>
-          <div class="profesor">
-            <img src="../images/imgProfesor.jpg" alt="profesor1" width="200px" height="300px"/>
-            <p>MERCEDES</p>
-          </div>
-          <div class="profesor">
-            <img src="../images/imgProfesor.jpg" alt="profesor1" width="200px" height="300px"/>
-            <p>NACHO</p>
-          </div>
-          <div class="profesor">
-            <img src="../images/imgProfesor.jpg" alt="profesor1" width="200px" height="300px"/>
-            <p>FER</p>
-          </div>
-        </div>
-      </div>
+      <section class="section">
+          <img src="../images/avatar1.jpg" alt="profesor1" class="imgSection" />
+          <img src="../images/avatar1.jpg" alt="profesor1" class="imgSection" />
+          <img src="../images/avatar1.jpg" alt="profesor1" class="imgSection" />
+          <img src="../images/avatar1.jpg" alt="profesor1" class="imgSection" />
+          <img src="../images/avatar1.jpg" alt="profesor1" class="imgSection" />
+      </section>
     </main>
 
     <footer>
