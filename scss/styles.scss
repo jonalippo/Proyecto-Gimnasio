@@ -266,3 +266,42 @@ footer {
     width: 10px;
   }
 }
+
+/*Propiedades icono whatsapp*/
+.btn-wsp {
+  position: fixed;
+  @include tamanos(55px, 55px);
+  line-height: 55px;
+  bottom: 30px;
+  right: 30px;
+  background-color: #0df053;
+  color: white;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
+  z-index: 100;
+  &:hover {
+    text-decoration: none;
+    color: #0df053;
+    background-color: white;
+  }
+}
+@media (max-width: 768px) {
+  .btn-wsp {
+    @include tamanos(35px, 35px);
+    line-height: 35px;
+    font-size: 25px;
+    right: 20px;
+  }
+}
+
+@media (max-width: 425px) {
+  .btn-wsp {
+    @include tamanos(35px, 35px);
+    line-height: 35px;
+    font-size: 25px;
+    bottom: 40px;
+    right: 20px;
+  }
+}

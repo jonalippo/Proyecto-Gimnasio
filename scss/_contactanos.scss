@@ -47,6 +47,7 @@
     }
   }
 
+  /*ubicacion y formulario*/
   .UbicYFormulario {
     display: flex;
     flex-direction: column;
@@ -128,7 +129,7 @@
       margin-bottom: 0;
     }
   }
-
+  /*Mapa de ubicacion*/
   .mapaUbicacion {
     @include tamanos(90%, 275px);
     margin-top: 1em;
