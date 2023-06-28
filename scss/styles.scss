@@ -154,6 +154,7 @@ body {
     width: 530px;
     text-align: center;
     margin: 0.5em;
+    text-shadow: 2px -1px 2px rgb(253, 0, 0);
   }
 
   .lineaRoja {
@@ -272,7 +273,7 @@ footer {
   position: fixed;
   @include tamanos(55px, 55px);
   line-height: 55px;
-  bottom: 30px;
+  bottom: 150px;
   right: 30px;
   background-color: #0df053;
   color: white;

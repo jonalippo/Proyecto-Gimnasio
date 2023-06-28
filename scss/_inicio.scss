@@ -78,6 +78,7 @@
           font-size: 20px;
           margin-top: 0.5em;
           font-weight: 600;
+          text-shadow: 2px -1px 2px rgb(253, 0, 0);
         }
         p {
           color: #a1a4a7;
@@ -134,6 +135,30 @@
       margin-top: 0;
     }
   }
+
+  .containerServicios{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    .imgServicios{
+      @include tamanos(80px,80px);
+    }
+    @media(max-width:768px){
+      .imgServicios{
+        @include tamanos(60px,60px);
+      }
+  }
+  @media(max-width:425px){
+    .imgServicios{
+      @include tamanos(50px,50px);
+    }
+}
+
+  }
+
+
+
 }
 
 @media (max-width: 425px) {

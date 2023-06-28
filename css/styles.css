@@ -1,9 +1,11 @@
 /*VARIABLES*/
 .bodyIndex {
   background-image: url(../images/fachada2.1.jpg);
-  background-position: top right;
-  background-repeat: no-repeat;
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right;
+  height: 100vh;
+  margin: 0;
 }
 .bodyIndex .mainIndex {
   display: flex;
@@ -30,12 +32,8 @@
 }
 @media (max-width: 425px) {
   .bodyIndex .mainIndex .logoIndex {
-    width: 350px;
-    height: 250px;
-  }
-  .bodyIndex .mainIndex .buttonMain {
-    width: 200px;
-    height: 30px;
+    width: 380px;
+    height: 280px;
   }
 }
 .bodyIndex .mainIndex .buttonMain {
@@ -60,9 +58,9 @@
 }
 @media (max-width: 425px), (max-width: 768px) {
   .bodyIndex .mainIndex .buttonMain {
-    width: 300px;
+    width: 350px;
     height: 40px;
-    margin-top: 1em;
+    margin-top: 0.5em;
     font-weight: 600;
   }
 }
@@ -79,6 +77,12 @@
   height: 40px;
 }
 
+@media (max-width: 425px) {
+  .iconoFooterIndex {
+    position: absolute;
+    top: 90%;
+  }
+}
 /* ------------------------ MAIN ------------------------------------ */
 .mainInicio {
   display: grid;
@@ -153,6 +157,7 @@
   font-size: 20px;
   margin-top: 0.5em;
   font-weight: 600;
+  text-shadow: 2px -1px 2px rgb(253, 0, 0);
 }
 .mainInicio .sectionActividades .containerActiv .containInfo p {
   color: #a1a4a7;
@@ -206,6 +211,27 @@
   .mainInicio .sectionActividades {
     flex-direction: column;
     margin-top: 0;
+  }
+}
+.mainInicio .containerServicios {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.mainInicio .containerServicios .imgServicios {
+  width: 80px;
+  height: 80px;
+}
+@media (max-width: 768px) {
+  .mainInicio .containerServicios .imgServicios {
+    width: 60px;
+    height: 60px;
+  }
+}
+@media (max-width: 425px) {
+  .mainInicio .containerServicios .imgServicios {
+    width: 50px;
+    height: 50px;
   }
 }
 
@@ -359,7 +385,7 @@
   margin: 0.1em;
   flex-grow: 1;
   object-fit: cover;
-  opacity: 0.4;
+  opacity: 0.6;
   transition: 0.6s ease;
 }
 .mainInst .section .imgSection:hover {
@@ -454,7 +480,7 @@
   width: 0px;
   flex-grow: 1;
   object-fit: cover;
-  opacity: 0.4;
+  opacity: 0.6;
   transition: 0.5s ease;
   border-radius: 1em;
   margin: 0.2em;
@@ -763,6 +789,7 @@ body {
   width: 530px;
   text-align: center;
   margin: 0.5em;
+  text-shadow: 2px -1px 2px rgb(253, 0, 0);
 }
 .titulos .lineaRoja {
   border: solid rgb(199, 12, 12);
@@ -879,7 +906,7 @@ footer .dato p {
   width: 55px;
   height: 55px;
   line-height: 55px;
-  bottom: 30px;
+  bottom: 150px;
   right: 30px;
   background-color: #0df053;
   color: white;

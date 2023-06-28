@@ -11,10 +11,12 @@
 
 .bodyIndex {
   background-image: url(../images/fachada2.1.jpg);
-  background-position: top right;
-  background-repeat: no-repeat;
   background-size: cover;
-
+  background-repeat: no-repeat;
+  background-position: right;
+  height: 100vh;
+  margin: 0;
+  
   .mainIndex {
     @include flex(flex, none, center);
     flex-direction: column;
@@ -36,10 +38,7 @@
     }
     @media (max-width: 425px) {
       .logoIndex {
-        @include tamanos(350px, 250px);
-      }
-      .buttonMain {
-        @include tamanos(200px, 30px);
+        @include tamanos(380px, 280px);
       }
     }
 
@@ -62,8 +61,8 @@
     }
     @media (max-width: 425px), (max-width: 768px) {
       .buttonMain {
-        @include tamanos(300px, 40px);
-        margin-top: 1em;
+        @include tamanos(350px, 40px);
+        margin-top: 0.5em;
         font-weight: 600;
       }
     }
@@ -75,4 +74,10 @@
 }
 .iconoFooterIndex {
   @include tamanos(40px, 40px);
+}
+@media(max-width:425px){
+  .iconoFooterIndex{
+    position: absolute;
+    top: 90%;
+  }
 }
