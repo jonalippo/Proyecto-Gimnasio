@@ -136,29 +136,25 @@
     }
   }
 
-  .containerServicios{
+  .containerServicios {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 
-    .imgServicios{
-      @include tamanos(80px,80px);
+    .imgServicios {
+      @include tamanos(80px, 80px);
     }
-    @media(max-width:768px){
-      .imgServicios{
-        @include tamanos(60px,60px);
+    @media (max-width: 768px) {
+      .imgServicios {
+        @include tamanos(60px, 60px);
       }
-  }
-  @media(max-width:425px){
-    .imgServicios{
-      @include tamanos(50px,50px);
     }
-}
-
+    @media (max-width: 425px) {
+      .imgServicios {
+        @include tamanos(50px, 50px);
+      }
+    }
   }
-
-
-
 }
 
 @media (max-width: 425px) {
