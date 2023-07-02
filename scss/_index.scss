@@ -71,13 +71,28 @@
 .contFooterIndex {
   @include flex(flex, space-evenly, center);
   width: 100%;
+  top: 60%;
+  position: relative;
 }
 .iconoFooterIndex {
   @include tamanos(40px, 40px);
 }
+@media(max-width: 768px){
+  .contFooterIndex{
+    top: 180%;
+  }
+  
+}
+
 @media(max-width:425px){
   .iconoFooterIndex{
+    top: 95%;
+  }
+  .contFooterIndex {
+    @include flex(flex, space-evenly, center);
+    width: 90%;
+    height: 40px;
     position: absolute;
-    top: 90%;
+    top: 100%;
   }
 }

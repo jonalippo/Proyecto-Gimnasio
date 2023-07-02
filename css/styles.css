@@ -70,6 +70,8 @@
   justify-content: space-evenly;
   align-items: center;
   width: 100%;
+  top: 60%;
+  position: relative;
 }
 
 .iconoFooterIndex {
@@ -77,10 +79,23 @@
   height: 40px;
 }
 
+@media (max-width: 768px) {
+  .contFooterIndex {
+    top: 180%;
+  }
+}
 @media (max-width: 425px) {
   .iconoFooterIndex {
+    top: 95%;
+  }
+  .contFooterIndex {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 90%;
+    height: 40px;
     position: absolute;
-    top: 90%;
+    top: 100%;
   }
 }
 /* ------------------------ MAIN ------------------------------------ */
@@ -265,47 +280,50 @@
     height: 280px;
   }
 }
-.mainHorarios h3 {
-  margin-left: 1em;
-  margin-top: 1em;
-  font-size: 20px;
-  display: inline-block;
-  margin-left: 75px;
-}
-.mainHorarios p {
-  margin-left: 1em;
-  margin-top: 1em;
-  font-size: 20px;
-  display: inline-block;
-}
-@media (max-width: 425px) {
-  .mainHorarios p {
-    font-size: 12px;
-    text-align: center;
-  }
-}
 .mainHorarios .horariosMusculacion {
   color: white;
 }
+.mainHorarios .horariosMusculacion h3 {
+  margin-left: 75px;
+  margin-top: 1em;
+  font-size: 20px;
+  display: inline-block;
+}
+.mainHorarios .horariosMusculacion p {
+  margin-left: 1em;
+  margin-top: 1em;
+  font-size: 20px;
+  display: inline-block;
+}
 @media (max-width: 768px) {
-  .mainHorarios h3 {
-    margin-left: none;
-    margin-top: 1em;
-    font-size: 16px;
-  }
-  .mainHorarios p {
+  .mainHorarios .horariosMusculacion p {
     margin-left: 1em;
     margin-top: 1em;
     font-size: 14px;
   }
 }
 @media (max-width: 425px) {
-  .mainHorarios .horariosMusculacion {
-    display: inline-flex;
-    margin-left: -5.8em;
-  }
-  .mainHorarios h3 {
+  .mainHorarios .horariosMusculacion p {
     font-size: 12px;
+  }
+}
+@media (max-width: 768px) {
+  .mainHorarios .horariosMusculacion h3 {
+    margin-left: none;
+    margin-top: 1em;
+    font-size: 14px;
+  }
+}
+@media (max-width: 425px) {
+  .mainHorarios .horariosMusculacion h3 {
+    margin-left: 5px;
+    margin-top: none;
+    font-size: 12px;
+    text-align: center;
+  }
+}
+@media (max-width: 425px) {
+  .mainHorarios .horariosMusculacion {
     text-align: center;
   }
 }
@@ -937,7 +955,7 @@ footer .dato p {
     height: 35px;
     line-height: 35px;
     font-size: 25px;
-    bottom: 40px;
+    bottom: 100px;
     right: 20px;
   }
 }
