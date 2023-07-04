@@ -25,7 +25,7 @@
     color: white;
 
     h3 {
-      @include margin-font(75px, 1em, 20px);
+      @include margin-font(200px, 1em, 20px);
       display: inline-block;
     }
 
@@ -35,7 +35,7 @@
     }
     @media (max-width: 768px) {
       p {
-        @include margin-font(1em, 1em, 14px);
+        @include margin-font(0, 1em, 14px);
       }
     }
 
@@ -44,7 +44,11 @@
         font-size: 12px;
       }
     }
-
+    @media (max-width:1024px){
+      h3{
+        @include margin-font(80px, 1em, 20px);
+      }
+    }
     @media (max-width: 768px) {
       h3 {
         @include margin-font(none, 1em, 14px);
@@ -87,7 +91,7 @@
     }
     tr:hover {
       background-color: $colorSecundario;
-      font-weight: 600;
+      // font-weight: 600;
       color: $colorFondo;
     }
   }
