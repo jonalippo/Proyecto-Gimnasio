@@ -16,7 +16,7 @@
   background-position: right;
   height: 100vh;
   margin: 0;
-  
+
   .mainIndex {
     @include flex(flex, none, center);
     flex-direction: column;
@@ -71,28 +71,37 @@
 .contFooterIndex {
   @include flex(flex, space-evenly, center);
   width: 100%;
-  top: 60%;
+  top: 10%;
   position: relative;
 }
 .iconoFooterIndex {
-  @include tamanos(40px, 40px);
-}
-@media(max-width: 768px){
-  .contFooterIndex{
-    top: 180%;
-  }
-  
+  @include tamanos(50px, 50px);
 }
 
-@media(max-width:425px){
-  .iconoFooterIndex{
-    top: 95%;
+@media (max-width: 1024px) {
+  .contFooterIndex {
+    top: 70%;
   }
+}
+
+@media (max-width: 768px) {
+  .contFooterIndex {
+    top: 65%;
+  }
+  .iconoFooterIndex {
+    @include tamanos(30px, 30px);
+  }
+}
+
+@media (max-width: 425px) {
   .contFooterIndex {
     @include flex(flex, space-evenly, center);
     width: 90%;
     height: 40px;
     position: absolute;
-    top: 100%;
+    top: 92%;
+  }
+  .iconoFooterIndex {
+    @include tamanos(30px, 30px);
   }
 }

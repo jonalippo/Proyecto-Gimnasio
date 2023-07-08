@@ -44,6 +44,22 @@
     }
   }
 
+  h5 {
+    text-align: center;
+    text-shadow: 2px -1px 2px rgb(253, 0, 0);
+  }
+
+  @media (max-width: 768px) {
+    h5 {
+      font-size: 12px;
+    }
+  }
+  @media (max-width: 425px) {
+    h5 {
+      font-size: 8px;
+    }
+  }
+
   p {
     font-size: $fuentePpal;
     text-align: center;
@@ -55,10 +71,11 @@
   }
   @media (max-width: 425px) {
     p {
-      font-size: 8px;
+      font-size: 7px;
     }
   }
 }
+
 /*propiedades del section*/
 .section {
   display: flex;

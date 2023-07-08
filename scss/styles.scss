@@ -156,6 +156,14 @@ body {
     margin: 0.5em;
     text-shadow: 2px -1px 2px rgb(253, 0, 0);
   }
+  h2 {
+    color: white;
+    font-size: 30px;
+    width: 530px;
+    text-align: center;
+    margin: 0.5em;
+    text-shadow: 2px -1px 2px rgb(253, 0, 0);
+  }
 
   .lineaRoja {
     border: solid $colorSecundario;
@@ -169,6 +177,11 @@ body {
     margin: 0;
 
     h1 {
+      font-size: 15px;
+      margin: 0.5em;
+      width: 300px;
+    }
+    h2 {
       font-size: 15px;
       margin: 0.5em;
       width: 300px;
@@ -187,6 +200,11 @@ body {
     margin-top: 0.5em;
 
     h1 {
+      font-size: 15px;
+      margin: 0.5em;
+      width: 200px;
+    }
+    h2 {
       font-size: 15px;
       margin: 0.5em;
       width: 200px;

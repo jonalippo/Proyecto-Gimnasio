@@ -70,24 +70,30 @@
   justify-content: space-evenly;
   align-items: center;
   width: 100%;
-  top: 60%;
+  top: 10%;
   position: relative;
 }
 
 .iconoFooterIndex {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
 }
 
+@media (max-width: 1024px) {
+  .contFooterIndex {
+    top: 70%;
+  }
+}
 @media (max-width: 768px) {
   .contFooterIndex {
-    top: 180%;
+    top: 65%;
+  }
+  .iconoFooterIndex {
+    width: 30px;
+    height: 30px;
   }
 }
 @media (max-width: 425px) {
-  .iconoFooterIndex {
-    top: 95%;
-  }
   .contFooterIndex {
     display: flex;
     justify-content: space-evenly;
@@ -95,7 +101,11 @@
     width: 90%;
     height: 40px;
     position: absolute;
-    top: 100%;
+    top: 92%;
+  }
+  .iconoFooterIndex {
+    width: 30px;
+    height: 30px;
   }
 }
 /* ------------------------ MAIN ------------------------------------ */
@@ -480,6 +490,20 @@
     height: 140px;
   }
 }
+.nosotros h5, .nosotros .porqNosotros h5 {
+  text-align: center;
+  text-shadow: 2px -1px 2px rgb(253, 0, 0);
+}
+@media (max-width: 768px) {
+  .nosotros h5, .nosotros .porqNosotros h5 {
+    font-size: 12px;
+  }
+}
+@media (max-width: 425px) {
+  .nosotros h5, .nosotros .porqNosotros h5 {
+    font-size: 8px;
+  }
+}
 .nosotros p, .nosotros .porqNosotros p {
   font-size: 18px;
   text-align: center;
@@ -491,7 +515,7 @@
 }
 @media (max-width: 425px) {
   .nosotros p, .nosotros .porqNosotros p {
-    font-size: 8px;
+    font-size: 7px;
   }
 }
 
@@ -557,6 +581,7 @@
   font-size: 18px;
   font-weight: 700;
   color: white;
+  margin-top: 1em;
 }
 @media (max-width: 768px) {
   .mainHorarios .textoFormulario {
@@ -815,6 +840,14 @@ body {
   margin: 0.5em;
   text-shadow: 2px -1px 2px rgb(253, 0, 0);
 }
+.titulos h2 {
+  color: white;
+  font-size: 30px;
+  width: 530px;
+  text-align: center;
+  margin: 0.5em;
+  text-shadow: 2px -1px 2px rgb(253, 0, 0);
+}
 .titulos .lineaRoja {
   border: solid rgb(199, 12, 12);
   width: 150px;
@@ -830,6 +863,11 @@ body {
     margin: 0.5em;
     width: 300px;
   }
+  .titulos h2 {
+    font-size: 15px;
+    margin: 0.5em;
+    width: 300px;
+  }
   .titulos .lineaRoja {
     width: 100px;
     border-width: 3px;
@@ -841,6 +879,11 @@ body {
     margin-top: 0.5em;
   }
   .titulos h1 {
+    font-size: 15px;
+    margin: 0.5em;
+    width: 200px;
+  }
+  .titulos h2 {
     font-size: 15px;
     margin: 0.5em;
     width: 200px;
