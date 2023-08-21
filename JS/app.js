@@ -8,7 +8,8 @@ if (document.readyState == "loading") {
   ready();
 }
 //Saludo inicial
-alert("Bienvenido!!. Elegi el accesorio adecuado para tu entrenamiento!!");
+let saludo = prompt("Bienvenido/a. Como te llamas?");
+alert("Hola!" + " "  + saludo + " " + "Que tengas una buena compra!!");
 
 function ready() {
   //Agregro funcionalidad a los botones eliminar del carrito

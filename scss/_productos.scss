@@ -52,16 +52,18 @@
 .contenedor .contenedor-items .item {
   max-width: 200px;
   margin: auto;
-  border: 1px solid #666;
+  border: 1px solid #505050;
+  background-color: rgb(27, 27, 27);
   border-radius: 10px;
   padding: 20px;
   transition: 0.3s;
 }
 .contenedor .contenedor-items .item .img-item {
+  border-radius: 0.5em;
   width: 100%;
 }
 .contenedor .contenedor-items .item:hover {
-  box-shadow: 0 0 10px #666;
+  box-shadow: 0 0 10px #505050;
   scale: 1.05;
 }
 .contenedor .contenedor-items .item .titulo-item {
@@ -95,7 +97,7 @@
 }
 /* seccion carrito */
 .carrito {
-  border: 1px solid #666;
+  border: 1px solid #505050;
   width: 35%;
   margin-top: 30px;
   border-radius: 10px;
@@ -103,6 +105,7 @@
   margin-bottom: auto;
   position: sticky !important;
   top: 0;
+  background-color: rgb(27, 27, 27);
   transition: 0.3s;
   /* Estilos para ocultar */
   margin-right: -100%;
@@ -111,12 +114,12 @@
 .carrito .header-carrito {
   background-color: $colorPrimario;
   color: $colorFondo;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-shadow: 1px -1px 1px $colorSecundario;
-  text-align: center;
-  text-transform: uppercase;
   font-size: $fuentePpal;
-  font-weight: 800;
-  padding: 5px 0;
+  padding: 4px;
 }
 .carrito .carrito-item {
   display: flex;
@@ -125,6 +128,7 @@
   padding: 20px;
 }
 .carrito .carrito-item img {
+  border-radius: 0.5em;
   margin-right: 20px;
 }
 .carrito .carrito-item .carrito-item-titulo {
