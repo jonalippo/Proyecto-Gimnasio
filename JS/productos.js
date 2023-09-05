@@ -37,12 +37,11 @@ const productos = [
   {
     titulo: "Muñequera gym 'Balboafit'",
     imagen: "../images/muñequera1.jpg",
-    precio: "$ 6.500",
+    precio: "$ 6.550",
   },
 ];
 
-//Generacion de la estructura HTML para recorrer el arreglo de productos
-
+//Generacion de la estructura HTML para recorrer el aiorreglo de productos
 const contenedorItems = document.querySelector(".contenedor-items");
 
 productos.forEach((producto) => {
@@ -73,3 +72,7 @@ productos.forEach((producto) => {
 
   contenedorItems.appendChild(itemDiv);
 });
+
+
+
+

@@ -233,3 +233,38 @@
     width: 100%;
   }
 }
+
+//Estilos del modal
+.modal{
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgb(121, 116, 116);
+  top:400px;
+  left: 400px;
+  width: 500px;
+  height: 200px;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(248, 242, 242, 0.5);
+  text-align: center;
+}
+
+.buttonClose{
+  background-color: rgb(199, 12, 12);
+  border:0;
+  border-radius: 5px;
+  box-shadow:0 2px 8px rgba(0, 0, 0, 0.2);
+  color: white;
+  font-size: 16px;
+  padding: 5px 20px;
+  cursor: pointer;
+  margin-top: 40px;
+}
+
+.modalTexto{
+  color: black;
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: 50px;
+}
