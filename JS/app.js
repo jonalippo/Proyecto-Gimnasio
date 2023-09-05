@@ -27,13 +27,54 @@ function ready() {
     button.addEventListener("click", restarCantidad);
   }
 
+  const contenedorItems = document.querySelector(".contenedor-items");
+
+  // Cargar el archivo JSON de forma asíncrona usando Fetch API
+  fetch('../JSON/productos.json')
+    .then(response => {
+      return response.json();
+    }).then(json => {
+      json.forEach((producto) => {
+        const itemDiv = document.createElement("div");
+        itemDiv.classList.add("item");
+
+        const tituloItem = document.createElement("span");
+        tituloItem.classList.add("titulo-item");
+        tituloItem.textContent = producto.titulo;
+
+        const imagenItem = document.createElement("img");
+        imagenItem.classList.add("img-item");
+        imagenItem.src = producto.imagen;
+        imagenItem.alt = producto.titulo;
+
+        const precioItem = document.createElement("span");
+        precioItem.classList.add("precio-item");
+        precioItem.textContent = `${producto.precio}`;
+
+        const botonItem = document.createElement("button");
+        botonItem.classList.add("boton-item");
+        botonItem.textContent = "Agregar al carrito";
+
+        itemDiv.appendChild(tituloItem);
+        itemDiv.appendChild(imagenItem);
+        itemDiv.appendChild(precioItem);
+        itemDiv.appendChild(botonItem);
+
+        contenedorItems.appendChild(itemDiv);
+      });
+
   // Agrego funcionalidad al botón Agregar al carrito
   const botonesAgregarAlCarrito = document.getElementsByClassName("boton-item");
-  console.log(botonesAgregarAlCarrito);
   for (let i = 0; i < botonesAgregarAlCarrito.length; i++) {
     let button = botonesAgregarAlCarrito[i];
     button.addEventListener("click", agregarAlCarritoClicked);
   }
+
+})
+.catch(error => {
+  console.error('Error al cargar el archivo JSON:', error);
+});
+
 
   // Agrego funcionalidad al botón comprar
   document
