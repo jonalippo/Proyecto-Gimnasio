@@ -1,50 +1,55 @@
-const productos = [
-  {
-    titulo: "Guantes gym 'Proyect'",
-    imagen: "../images/guantes1.jpg",
-    precio: "$ 10.000",
-  },
-  {
-    titulo: "Guantes gym con abrojo",
-    imagen: "../images/guantes2.jpg",
-    precio: "$ 8.000",
-  },
-  {
-    titulo: "Guantes gym con muñequeras",
-    imagen: "../images/guantes3.jpg",
-    precio: "$ 12.000",
-  },
-  {
-    titulo: "Vaso Shaker 'Everlast'",
-    imagen: "../images/sheker1.jpg",
-    precio: "$ 8.000",
-  },
-  {
-    titulo: "Vaso Shaker 'Proyect'",
-    imagen: "../images/sheker2.jpg",
-    precio: "$ 6.000",
-  },
-  {
-    titulo: "Vaso Shaker generico",
-    imagen: "../images/sheker3.jpg",
-    precio: "$ 4.000",
-  },
-  {
-    titulo: "Toallas de mano (35*50)",
-    imagen: "../images/toalla1.jpg",
-    precio: "$ 3.000",
-  },
-  {
-    titulo: "Muñequera gym 'Balboafit'",
-    imagen: "../images/muñequera1.jpg",
-    precio: "$ 6.550",
-  },
-];
-
+// const productos = [
+//   {
+//     titulo: "Guantes gym 'Proyect'",
+//     imagen: "../images/guantes1.jpg",
+//     precio: "$ 10.000",
+//   },
+//   {
+//     titulo: "Guantes gym con abrojo",
+//     imagen: "../images/guantes2.jpg",
+//     precio: "$ 8.000",
+//   },
+//   {
+//     titulo: "Guantes gym con muñequeras",
+//     imagen: "../images/guantes3.jpg",
+//     precio: "$ 12.000",
+//   },
+//   {
+//     titulo: "Vaso Shaker 'Everlast'",
+//     imagen: "../images/sheker1.jpg",
+//     precio: "$ 8.000",
+//   },
+//   {
+//     titulo: "Vaso Shaker 'Proyect'",
+//     imagen: "../images/sheker2.jpg",
+//     precio: "$ 6.000",
+//   },
+//   {
+//     titulo: "Vaso Shaker generico",
+//     imagen: "../images/sheker3.jpg",
+//     precio: "$ 4.000",
+//   },
+//   {
+//     titulo: "Toallas de mano (35*50)",
+//     imagen: "../images/toalla1.jpg",
+//     precio: "$ 3.000",
+//   },
+//   {
+//     titulo: "Muñequera gym 'Balboafit'",
+//     imagen: "../images/muñequera1.jpg",
+//     precio: "$ 6.550",
+//   },
+// ];
+document.addEventListener("DOMContentLoaded", () => {
 //Generacion de la estructura HTML para recorrer el aiorreglo de productos
 const contenedorItems = document.querySelector(".contenedor-items");
 
-productos.forEach((producto) => {
+// Cargar el archivo JSON de forma asíncrona usando Fetch API
+fetch('../JSON/productos.json')
+    .then(response => {
+      return response.json();
+    }).then(json => {
+ json.forEach((producto) => {
   const itemDiv = document.createElement("div");
   itemDiv.classList.add("item");
 
@@ -72,7 +77,8 @@ productos.forEach((producto) => {
 
   contenedorItems.appendChild(itemDiv);
 });
-
-
-
-
+})
+.catch(error => {
+  console.error('Error al cargar el archivo JSON:', error);
+});
+});
