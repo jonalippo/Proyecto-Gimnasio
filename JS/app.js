@@ -29,6 +29,7 @@ function ready() {
 
   // Agrego funcionalidad al botón Agregar al carrito
   const botonesAgregarAlCarrito = document.getElementsByClassName("boton-item");
+  console.log(botonesAgregarAlCarrito);
   for (let i = 0; i < botonesAgregarAlCarrito.length; i++) {
     let button = botonesAgregarAlCarrito[i];
     button.addEventListener("click", agregarAlCarritoClicked);
@@ -58,6 +59,7 @@ function pagarClicked() {
 }
 
 function agregarAlCarritoClicked(event) {
+  console.log("llego " + event);
   let button = event.target;
   let item = button.parentElement;
   let titulo = item.getElementsByClassName("titulo-item")[0].innerText;
