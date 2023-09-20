@@ -2,41 +2,41 @@
     {
       "titulo": "Guantes gym 'Proyect'",
       "imagen": "../images/guantes1.jpg",
-      "precio": 10000
+      "precio": "$10000"
     },
     {
       "titulo": "Guantes gym con abrojo",
       "imagen": "../images/guantes2.jpg",
-      "precio": 80000
+      "precio": "$8000"
     },
     {
       "titulo": "Guantes gym con muñequeras",
       "imagen": "../images/guantes3.jpg",
-      "precio": 12000
+      "precio": "$12000"
     },
     {
       "titulo": "Vaso Shaker 'Everlast'",
       "imagen": "../images/sheker1.jpg",
-      "precio": 8000
+      "precio": "$8000"
     },
     {
       "titulo": "Vaso Shaker 'Proyect'",
       "imagen": "../images/sheker2.jpg",
-      "precio": 6000
+      "precio": "$6000"
     },
     {
       "titulo": "Vaso Shaker generico",
       "imagen": "../images/sheker3.jpg",
-      "precio": 4000
+      "precio": "$4000"
     },
     {
       "titulo": "Toallas de mano (35*50)",
       "imagen": "../images/toalla1.jpg",
-      "precio": 3000
+      "precio": "$3000"
     },
     {
       "titulo": "Muñequera gym 'Balboafit'",
       "imagen": "../images/muñequera1.jpg",
-      "precio": 6500
+      "precio": "$6500"
     }
   ]
